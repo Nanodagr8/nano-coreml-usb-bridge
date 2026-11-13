@@ -82,6 +82,63 @@ class R1Tests(unittest.TestCase):
         with self.assertRaises(ValueError):
             r1.run_iphone_once("public synthetic prompt","short",client=FakeEmpty())
 
+    def test_v11_iphone_token_metrics_optional_and_sanitized(self):
+        class FakeV11:
+            def generate(self, prompt, max_tokens):
+                return {
+                    "model_id":r1.IPHONE_MODEL,
+                    "text":"PRIVATE_MODEL_OUTPUT_DO_NOT_RECORD",
+                    "completion_tokens":22,
+                    "metrics_source":"on_device_coreml_generator",
+                    "model_elapsed_ms":1072.5,
+                    "prefill_ms":50.4,
+                    "generator_tokens_per_second":41.6,
+                }
+        row=r1.run_iphone_once("PRIVATE_INPUT","short",client=FakeV11())
+        self.assertEqual(row["completion_tokens_reported"],22)
+        self.assertEqual(row["completion_token_source"],"on_device_coreml_generator")
+        self.assertAlmostEqual(row["prefill_duration_s_reported"],0.0504)
+        self.assertEqual(row["model_elapsed_ms_reported"],1072.5)
+        self.assertEqual(row["generator_decode_tokens_per_second_reported"],41.6)
+        self.assertFalse(row["hardware_placement_verified"])
+        self.assertNotIn("PRIVATE_INPUT",json.dumps(row))
+        self.assertNotIn("PRIVATE_MODEL_OUTPUT",json.dumps(row))
+
+    def test_v11_iphone_invalid_metrics_fail_closed(self):
+        good={
+            "model_id":r1.IPHONE_MODEL, "text":"synthetic answer",
+            "completion_tokens":22, "metrics_source":"on_device_coreml_generator",
+            "model_elapsed_ms":1000.0,"prefill_ms":40.0,
+            "generator_tokens_per_second":30.0,
+        }
+        class Fake:
+            def __init__(self,d): self.d=d
+            def generate(self,prompt,max_tokens): return self.d
+        bad=[
+            dict(good, completion_tokens=True),
+            dict(good, completion_tokens=33),
+            dict(good, completion_tokens=-1),
+            dict(good, metrics_source="from_guesswork"),
+            dict(good, prefill_ms=float("nan")),
+            dict(good, generator_tokens_per_second=float("inf")),
+            dict(good, model_elapsed_ms=-10),
+            dict(good, completion_tokens=None),
+        ]
+        for data in bad:
+            with self.subTest(data=str(data)[:90]):
+                with self.assertRaises(ValueError):
+                    r1.run_iphone_once("test prompt","short",client=Fake(data))
+
+    def test_v10_iphone_response_backward_compatible(self):
+        class FakeV10:
+            def generate(self,prompt,max_tokens):
+                return {"model_id":r1.IPHONE_MODEL, "text":"success"}
+        row=r1.run_iphone_once("public test prompt","short",client=FakeV10())
+        self.assertTrue(row["success"])
+        self.assertIsNone(row["completion_tokens_reported"])
+        self.assertEqual(row["completion_token_source"],"unavailable_on_v10")
+        self.assertIsNone(row["model_elapsed_ms_reported"])
+
     def test_summary_no_cross_model_speedup(self):
         rows=[{"target":"windows_cpu","label":"short","phase":"measurement",
                "success":True,"elapsed_wall_s":2.5},

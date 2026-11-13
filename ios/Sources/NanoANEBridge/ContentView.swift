@@ -62,11 +62,28 @@ final class NanoModelSession: ObservableObject {
         case .misconfigured: throw ServiceError.invalidServerCredential
         }
         let request = try NeuralProtocol.parseGeneration(body)
-        guard isLoaded, let generateAnswer else {
+        guard isLoaded, let measureAnswer else {
             throw ServiceError.modelNotLoaded
         }
-        let text = try await generateAnswer(request.prompt, request.maxTokens)
-        return try JSONEncoder().encode(NeuralProtocol.makeGenerationResponse(text: text))
+        // The same Core ML generator already measures generated token IDs.
+        // Only bounded, in-memory numerical telemetry is returned; no logs.
+        let (text, metrics) = try await measureAnswer(request.prompt, request.maxTokens)
+        guard metrics.outputTokens >= 0,
+              metrics.outputTokens <= request.maxTokens,
+              metrics.elapsedMs.isFinite, metrics.elapsedMs >= 0,
+              metrics.prefillMs.isFinite, metrics.prefillMs >= 0,
+              metrics.generatorTokensPerSecond.isFinite,
+              metrics.generatorTokensPerSecond >= 0 else {
+            throw NSError(domain: "NanoANEBridge", code: 16,
+                          userInfo: [NSLocalizedDescriptionKey:
+                            "Invalid local generation telemetry."])
+        }
+        return try JSONEncoder().encode(NeuralProtocol.makeGenerationResponse(
+            text: text,
+            completionTokens: metrics.outputTokens,
+            modelElapsedMs: metrics.elapsedMs,
+            generatorTokensPerSecond: metrics.generatorTokensPerSecond,
+            prefillMs: metrics.prefillMs))
     }
 
     func run(_ input: String) {
