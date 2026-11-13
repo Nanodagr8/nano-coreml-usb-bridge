@@ -1,0 +1,35 @@
+# Signing and confidential material
+*.p12
+*.pfx
+*.key
+*.pem
+*.mobileprovision
+*.cer
+*.crt
+*.der
+*.secrets
+*.secret
+.env
+.env.*
+credentials*
+*.ipa
+*.xcarchive/
+*.dSYM/
+# Models, private snapshots, compiled binaries
+*.mlmodelc/
+*.mlpackage/
+*.safetensors
+*.gguf
+*.bin
+*.vhdx
+*.log
+# Build caches
+.build/
+.swiftpm/
+__pycache__/
+.pytest_cache/
+*.py[cod]
+.venv/
+venv/
+xcuserdata/
+.DS_Store
