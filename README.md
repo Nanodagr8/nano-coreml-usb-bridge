@@ -52,6 +52,10 @@ Do not put credentials or certificates into Git. Follow [reproduction steps](doc
 
 We have added a guarded [R1 benchmark harness](client/r1_benchmark.py) and published a [sanitized Windows CPU/GPU exploratory dataset](results/r1_qwen35_08b_windows_exploratory.json), with a [results report](docs/R1_08B_WINDOWS_RESULTS_20261113.md). Both Windows conditions use Ollama Qwen3.5 0.8B Q8_0; the tests are **not** an iPhone comparison or a proven offloading speedup. GPU/CPU attribution comes from Ollama's reported PROCESSOR status; the iPhone's Core ML weight equivalence and ANE execution still require independent verification.
 
+## R2 research: balanced Windows CPU/GPU measurements
+
+The [R2 30-trial study](docs/R2_WINDOWS_BALANCED_20261113.md) now includes 60 controlled Windows-only measurements on the **same Ollama Qwen3.5 0.8B Q8_0 model**, collected in six alternating CPU/GPU block pairs. The median observed wall time was **1.414 s CPU** vs **1.022 s integrated GPU**; the paired-block geometric-mean speed ratio was **1.390×** (descriptive bootstrap interval 1.328–1.447×). You can inspect [all 72 observations](results/r2_windows_08b_balanced_20261113.json), [the analysis](results/r2_windows_08b_paired_analysis_20261113.json), and the [bench source](client/r2_windows_balanced_benchmark.py). This is **not** a demonstrated Windows-to-iPhone offloading benefit or energy/ANE measurement.
+
 ## Built on existing work
 
 NANO Studios integrates [CoreML-LLM](https://github.com/john-rocky/CoreML-LLM) (MIT) and [Swift Transformers](https://github.com/huggingface/swift-transformers) (Apache-2.0). The USB interface uses concepts implemented by [pymobiledevice3](https://github.com/doronz88/pymobiledevice3); it is not included or modified here. Model weights and upstream dependencies retain their own respective licenses.
