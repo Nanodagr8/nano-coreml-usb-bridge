@@ -54,9 +54,11 @@ We have added a guarded [R1 benchmark harness](client/r1_benchmark.py) and publi
 
 ## R3 research: Windows host productivity during AI inference
 
-The [physical-iPhone burst report](docs/R3_IPHONE_BURSTS_20261113.md) records 25 workload windows, 72 correct measured requests, and 24 matching Ollama CPU/GPU placement snapshots. Relative to nearby baselines, median Windows hashing throughput changed by -12.02% during CPU inference, -7.63% during GPU inference, and +0.05% during iPhone inference. iPhone responses were slower. This is a fixed-task trade-off, not a general speedup or energy claim.
+The [synchronized, position-balanced replication](docs/R3_SYNCHRONIZED_20261113.md) completed 25 windows, 72 correct measured requests, 100 validated worker intervals, and 24 matching Ollama placement snapshots. All six condition permutations were used. Relative to nearby baselines, median Windows hashing throughput changed by -10.88% during CPU inference, -7.49% during GPU inference, and -0.70% during iPhone inference. iPhone responses were slower. These are fixed-task observations, not a general speedup or energy claim.
 
-The [placement-checked burst runner](client/r3_burst_workload.py) defaults to a dry run and keeps reports outside the repository. [Numeric observations](results/r3_iphone_placement_bursts_20261113.json) allow the reported statistics to be independently recomputed. Earlier [Windows-only pilots](docs/R3_SYSTEM_WORKLOAD_PILOT_20261113.md) remain historical context.
+The [synchronized runner](client/r3_sync_burst_workload.py) defaults to a dry plan, accesses the phone only when explicitly selected, and writes new reports outside the repository. [Numeric evidence](results/r3_synchronized_permutations_20261113.json) includes the worker intervals and recomputable per-round statistics.
+
+Earlier [placement-checked bursts](docs/R3_IPHONE_BURSTS_20261113.md) and [Windows-only pilots](docs/R3_SYSTEM_WORKLOAD_PILOT_20261113.md) remain separate historical studies.
 
 ## Built on existing work
 

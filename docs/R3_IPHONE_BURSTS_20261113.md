@@ -1,3 +1,5 @@
+> Earlier burst study. See the [synchronized, position-balanced follow-up](R3_SYNCHRONIZED_20261113.md) for the later replication. Datasets are separate.
+
 # R3 physical iPhone burst comparison
 
 November 13, 2026. Research draft, not a general speedup or efficiency claim.
