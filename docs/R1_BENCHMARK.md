@@ -44,3 +44,15 @@ Once identical model configurations and instrumentation are available, use at le
 Total wall latency includes HTTP/TLS, USB transfer, scheduling and model processing. The wall-clock stopwatch alone cannot isolate USB/TLS overhead; a dedicated authenticated status-round-trip control will be needed.
 
 This is an engineering research reference and makes no claim of being a world-first implementation.
+
+## Approved 0.8B model on Windows (November 13 checkpoint)
+
+The Windows-only measurements now support an explicit allowlisted model selector:
+
+    python client/r1_benchmark.py --windows-model qwen3.5:0.8b
+    python client/r1_benchmark.py --windows-model qwen3.5:0.8b --execute --target windows_cpu --warmups 1 --repeats 3
+    python client/r1_benchmark.py --windows-model qwen3.5:0.8b --execute --target windows_gpu_candidate --warmups 1 --repeats 3
+
+The options never download a model automatically; `qwen3.5:0.8b` must be installed in the existing Ollama runtime first. The downloadable Windows model is Q8_0; **we have not established that the iPhone Core ML model uses the same quantization/weights**. A shared parameter size does not establish an apples-to-apples comparison.
+
+See the [sanitized Windows 0.8B results](R1_08B_WINDOWS_RESULTS_20261113.md) and [machine-readable observations](../results/r1_qwen35_08b_windows_exploratory.json). These are small exploratory samples, not a measured Windows/iPhone acceleration claim.

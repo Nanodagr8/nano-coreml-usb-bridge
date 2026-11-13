@@ -48,6 +48,10 @@ Then:
 
 Do not put credentials or certificates into Git. Follow [reproduction steps](docs/REPRODUCE.md).
 
+## R1 research: Windows 0.8B benchmark checkpoint
+
+We have added a guarded [R1 benchmark harness](client/r1_benchmark.py) and published a [sanitized Windows CPU/GPU exploratory dataset](results/r1_qwen35_08b_windows_exploratory.json), with a [results report](docs/R1_08B_WINDOWS_RESULTS_20261113.md). Both Windows conditions use Ollama Qwen3.5 0.8B Q8_0; the tests are **not** an iPhone comparison or a proven offloading speedup. GPU/CPU attribution comes from Ollama's reported PROCESSOR status; the iPhone's Core ML weight equivalence and ANE execution still require independent verification.
+
 ## Built on existing work
 
 NANO Studios integrates [CoreML-LLM](https://github.com/john-rocky/CoreML-LLM) (MIT) and [Swift Transformers](https://github.com/huggingface/swift-transformers) (Apache-2.0). The USB interface uses concepts implemented by [pymobiledevice3](https://github.com/doronz88/pymobiledevice3); it is not included or modified here. Model weights and upstream dependencies retain their own respective licenses.

@@ -1,0 +1,376 @@
+{
+  "schema": "nano-r1-sanitized-windows-v1",
+  "experiment_date_local": "2026-11-13",
+  "model": {
+    "ollama_tag": "qwen3.5:0.8b",
+    "ollama_digest": "de63045f29755d4721c09d54c9b45c2dadb644f4fd7d604d4cac90d96049971c",
+    "parameters": "752.39M",
+    "quantization": "Q8_0",
+    "ollama_version": "0.40.16"
+  },
+  "hardware": {
+    "host_cpu": "AMD Ryzen 7 5825U (8 cores, 16 threads)",
+    "gpu": "Integrated AMD Radeon Graphics",
+    "physical_ram_gb_approx": 27.9
+  },
+  "protocol": {
+    "temperature": 0,
+    "seed": 42,
+    "think": false,
+    "max_new_tokens": 32,
+    "prompt_labels": [
+      "logic",
+      "structure",
+      "short"
+    ],
+    "host_loopback_only": true,
+    "warmups_per_target_per_prompt": 1,
+    "measurements_per_target_per_prompt": 3,
+    "target_execution_blocks_not_interleaved": true,
+    "quality_comparison_measured": false,
+    "power_energy_measured": false,
+    "thermal_controlled": false,
+    "iphone_coreml_benchmark_performed": false,
+    "matched_iphone_quantization": false,
+    "gpu_telemetry": "Ollama ps PROCESSOR reported 100% GPU or CPU after corresponding runs; no kernel trace",
+    "novelty_or_speedup_claim": false
+  },
+  "source_report_provenance": [
+    {
+      "requested_backend": "windows_cpu",
+      "ollama_num_gpu_option": 0,
+      "ollama_ps_processor_after_benchmark": "100% CPU",
+      "private_source_report_sha256": "c50ee63d69a87111215d3c8c7c7bb48da64c0623773d9a7a30c322472dee18f6",
+      "warmup_requests": 3,
+      "measured_requests": 9,
+      "failures": 0
+    },
+    {
+      "requested_backend": "windows_gpu_candidate",
+      "ollama_num_gpu_option": 99,
+      "ollama_ps_processor_after_benchmark": "100% GPU",
+      "private_source_report_sha256": "2f5e9a2abada62874e0c9ee4f53d3c483e80a454ffec5abbb0d071ff9349a2b2",
+      "warmup_requests": 3,
+      "measured_requests": 9,
+      "failures": 0
+    }
+  ],
+  "summary": [
+    {
+      "requested_backend": "windows_cpu",
+      "prompt_label": "logic",
+      "n": 3,
+      "median_wall_seconds": 1.74349,
+      "mean_wall_seconds": 1.82201
+    },
+    {
+      "requested_backend": "windows_cpu",
+      "prompt_label": "structure",
+      "n": 3,
+      "median_wall_seconds": 1.97396,
+      "mean_wall_seconds": 1.92836
+    },
+    {
+      "requested_backend": "windows_cpu",
+      "prompt_label": "short",
+      "n": 3,
+      "median_wall_seconds": 2.26692,
+      "mean_wall_seconds": 2.28093
+    },
+    {
+      "requested_backend": "windows_gpu_candidate",
+      "prompt_label": "logic",
+      "n": 3,
+      "median_wall_seconds": 1.34116,
+      "mean_wall_seconds": 1.33888
+    },
+    {
+      "requested_backend": "windows_gpu_candidate",
+      "prompt_label": "structure",
+      "n": 3,
+      "median_wall_seconds": 1.47608,
+      "mean_wall_seconds": 1.48142
+    },
+    {
+      "requested_backend": "windows_gpu_candidate",
+      "prompt_label": "short",
+      "n": 3,
+      "median_wall_seconds": 1.56598,
+      "mean_wall_seconds": 1.62631
+    }
+  ],
+  "samples": [
+    {
+      "requested_backend": "windows_cpu",
+      "phase": "warmup",
+      "prompt_label": "logic",
+      "iteration": 0,
+      "end_to_end_wall_seconds": 5.50755,
+      "completion_tokens_reported": 22,
+      "prefill_seconds_reported": 0.3175,
+      "decode_seconds_reported": 1.67175,
+      "success": true
+    },
+    {
+      "requested_backend": "windows_cpu",
+      "phase": "warmup",
+      "prompt_label": "structure",
+      "iteration": 0,
+      "end_to_end_wall_seconds": 1.99063,
+      "completion_tokens_reported": 32,
+      "prefill_seconds_reported": 0.24331,
+      "decode_seconds_reported": 1.66206,
+      "success": true
+    },
+    {
+      "requested_backend": "windows_cpu",
+      "phase": "warmup",
+      "prompt_label": "short",
+      "iteration": 0,
+      "end_to_end_wall_seconds": 2.31483,
+      "completion_tokens_reported": 32,
+      "prefill_seconds_reported": 0.254,
+      "decode_seconds_reported": 1.97018,
+      "success": true
+    },
+    {
+      "requested_backend": "windows_cpu",
+      "phase": "measurement",
+      "prompt_label": "structure",
+      "iteration": 0,
+      "end_to_end_wall_seconds": 1.9828,
+      "completion_tokens_reported": 32,
+      "prefill_seconds_reported": 0.08312,
+      "decode_seconds_reported": 1.80199,
+      "success": true
+    },
+    {
+      "requested_backend": "windows_cpu",
+      "phase": "measurement",
+      "prompt_label": "logic",
+      "iteration": 0,
+      "end_to_end_wall_seconds": 1.74349,
+      "completion_tokens_reported": 22,
+      "prefill_seconds_reported": 0.0847,
+      "decode_seconds_reported": 1.55927,
+      "success": true
+    },
+    {
+      "requested_backend": "windows_cpu",
+      "phase": "measurement",
+      "prompt_label": "short",
+      "iteration": 0,
+      "end_to_end_wall_seconds": 2.26692,
+      "completion_tokens_reported": 32,
+      "prefill_seconds_reported": 0.08548,
+      "decode_seconds_reported": 2.07453,
+      "success": true
+    },
+    {
+      "requested_backend": "windows_cpu",
+      "phase": "measurement",
+      "prompt_label": "logic",
+      "iteration": 1,
+      "end_to_end_wall_seconds": 2.02298,
+      "completion_tokens_reported": 22,
+      "prefill_seconds_reported": 0.11375,
+      "decode_seconds_reported": 1.74713,
+      "success": true
+    },
+    {
+      "requested_backend": "windows_cpu",
+      "phase": "measurement",
+      "prompt_label": "short",
+      "iteration": 1,
+      "end_to_end_wall_seconds": 2.43225,
+      "completion_tokens_reported": 32,
+      "prefill_seconds_reported": 0.1005,
+      "decode_seconds_reported": 2.22219,
+      "success": true
+    },
+    {
+      "requested_backend": "windows_cpu",
+      "phase": "measurement",
+      "prompt_label": "structure",
+      "iteration": 1,
+      "end_to_end_wall_seconds": 1.97396,
+      "completion_tokens_reported": 32,
+      "prefill_seconds_reported": 0.08446,
+      "decode_seconds_reported": 1.79599,
+      "success": true
+    },
+    {
+      "requested_backend": "windows_cpu",
+      "phase": "measurement",
+      "prompt_label": "structure",
+      "iteration": 2,
+      "end_to_end_wall_seconds": 1.82833,
+      "completion_tokens_reported": 32,
+      "prefill_seconds_reported": 0.08001,
+      "decode_seconds_reported": 1.66296,
+      "success": true
+    },
+    {
+      "requested_backend": "windows_cpu",
+      "phase": "measurement",
+      "prompt_label": "short",
+      "iteration": 2,
+      "end_to_end_wall_seconds": 2.14363,
+      "completion_tokens_reported": 32,
+      "prefill_seconds_reported": 0.08078,
+      "decode_seconds_reported": 1.98836,
+      "success": true
+    },
+    {
+      "requested_backend": "windows_cpu",
+      "phase": "measurement",
+      "prompt_label": "logic",
+      "iteration": 2,
+      "end_to_end_wall_seconds": 1.69956,
+      "completion_tokens_reported": 22,
+      "prefill_seconds_reported": 0.07921,
+      "decode_seconds_reported": 1.53702,
+      "success": true
+    },
+    {
+      "requested_backend": "windows_gpu_candidate",
+      "phase": "warmup",
+      "prompt_label": "logic",
+      "iteration": 0,
+      "end_to_end_wall_seconds": 6.48334,
+      "completion_tokens_reported": 22,
+      "prefill_seconds_reported": 0.24615,
+      "decode_seconds_reported": 1.48344,
+      "success": true
+    },
+    {
+      "requested_backend": "windows_gpu_candidate",
+      "phase": "warmup",
+      "prompt_label": "structure",
+      "iteration": 0,
+      "end_to_end_wall_seconds": 1.69479,
+      "completion_tokens_reported": 32,
+      "prefill_seconds_reported": 0.27819,
+      "decode_seconds_reported": 1.31397,
+      "success": true
+    },
+    {
+      "requested_backend": "windows_gpu_candidate",
+      "phase": "warmup",
+      "prompt_label": "short",
+      "iteration": 0,
+      "end_to_end_wall_seconds": 1.71296,
+      "completion_tokens_reported": 32,
+      "prefill_seconds_reported": 0.25833,
+      "decode_seconds_reported": 1.38103,
+      "success": true
+    },
+    {
+      "requested_backend": "windows_gpu_candidate",
+      "phase": "measurement",
+      "prompt_label": "structure",
+      "iteration": 0,
+      "end_to_end_wall_seconds": 1.51729,
+      "completion_tokens_reported": 32,
+      "prefill_seconds_reported": 0.14912,
+      "decode_seconds_reported": 1.29081,
+      "success": true
+    },
+    {
+      "requested_backend": "windows_gpu_candidate",
+      "phase": "measurement",
+      "prompt_label": "logic",
+      "iteration": 0,
+      "end_to_end_wall_seconds": 1.37994,
+      "completion_tokens_reported": 22,
+      "prefill_seconds_reported": 0.12983,
+      "decode_seconds_reported": 1.1747,
+      "success": true
+    },
+    {
+      "requested_backend": "windows_gpu_candidate",
+      "phase": "measurement",
+      "prompt_label": "short",
+      "iteration": 0,
+      "end_to_end_wall_seconds": 1.77692,
+      "completion_tokens_reported": 32,
+      "prefill_seconds_reported": 0.11897,
+      "decode_seconds_reported": 1.55481,
+      "success": true
+    },
+    {
+      "requested_backend": "windows_gpu_candidate",
+      "phase": "measurement",
+      "prompt_label": "logic",
+      "iteration": 1,
+      "end_to_end_wall_seconds": 1.29553,
+      "completion_tokens_reported": 22,
+      "prefill_seconds_reported": 0.15422,
+      "decode_seconds_reported": 1.06662,
+      "success": true
+    },
+    {
+      "requested_backend": "windows_gpu_candidate",
+      "phase": "measurement",
+      "prompt_label": "short",
+      "iteration": 1,
+      "end_to_end_wall_seconds": 1.56598,
+      "completion_tokens_reported": 32,
+      "prefill_seconds_reported": 0.16003,
+      "decode_seconds_reported": 1.3374,
+      "success": true
+    },
+    {
+      "requested_backend": "windows_gpu_candidate",
+      "phase": "measurement",
+      "prompt_label": "structure",
+      "iteration": 1,
+      "end_to_end_wall_seconds": 1.4509,
+      "completion_tokens_reported": 32,
+      "prefill_seconds_reported": 0.11218,
+      "decode_seconds_reported": 1.2633,
+      "success": true
+    },
+    {
+      "requested_backend": "windows_gpu_candidate",
+      "phase": "measurement",
+      "prompt_label": "structure",
+      "iteration": 2,
+      "end_to_end_wall_seconds": 1.47608,
+      "completion_tokens_reported": 32,
+      "prefill_seconds_reported": 0.13566,
+      "decode_seconds_reported": 1.28525,
+      "success": true
+    },
+    {
+      "requested_backend": "windows_gpu_candidate",
+      "phase": "measurement",
+      "prompt_label": "short",
+      "iteration": 2,
+      "end_to_end_wall_seconds": 1.53602,
+      "completion_tokens_reported": 32,
+      "prefill_seconds_reported": 0.13639,
+      "decode_seconds_reported": 1.33357,
+      "success": true
+    },
+    {
+      "requested_backend": "windows_gpu_candidate",
+      "phase": "measurement",
+      "prompt_label": "logic",
+      "iteration": 2,
+      "end_to_end_wall_seconds": 1.34116,
+      "completion_tokens_reported": 22,
+      "prefill_seconds_reported": 0.14156,
+      "decode_seconds_reported": 1.12224,
+      "success": true
+    }
+  ],
+  "limitations": [
+    "Three trials per task and target are exploratory, not statistical certification.",
+    "CPU-requested and GPU-requested benchmarks ran as separate blocks, with possible cache/thermal/order effects.",
+    "Ollama ps reports processor residency, not independently measured kernel-level utilization.",
+    "No device energy readings or output quality scoring.",
+    "iPhone uses Core ML model with unknown quantization equivalence to Windows Ollama Q8_0; no Windows/iPhone speedup can be claimed.",
+    "No user text, model outputs, secret credentials or private paths included."
+  ]
+}

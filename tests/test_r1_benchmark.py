@@ -91,6 +91,39 @@ class R1Tests(unittest.TestCase):
         self.assertEqual(rc,0)
         self.assertIn("DRY_RUN_NO_INFERENCE",out.getvalue())
 
+    def test_08b_model_selection_uses_explicit_identifier(self):
+        seen = []
+        def fake(url, payload):
+            seen.append(payload)
+            return {"model":"qwen3.5:0.8b", "response":"PRIVATE_DO_NOT_LOG",
+                    "eval_count":8, "eval_duration":1000000000}
+        row = r1.run_windows_once("sensitive input", "short",
+                                   model="qwen3.5:0.8b", request_fn=fake)
+        self.assertEqual(row["model"], "qwen3.5:0.8b")
+        self.assertEqual(seen[0]["model"], "qwen3.5:0.8b")
+        self.assertIs(seen[0]["think"], False)
+        self.assertNotIn("PRIVATE_DO_NOT_LOG",json.dumps(row))
+        self.assertNotIn("sensitive input",json.dumps(row))
+        self.assertFalse(r1.plan("qwen3.5:0.8b")["parity"]["matched"])
+
+    def test_reject_unapproved_model_and_response_mismatch(self):
+        with self.assertRaises(ValueError):
+            r1.plan("my-private-model:latest")
+        with self.assertRaises(ValueError):
+            r1.run_windows_once("prompt", "short", model="my-private-model:latest",
+                                request_fn=lambda url, body: {})
+        with self.assertRaises(ValueError):
+            r1.run_windows_once("prompt", "short", model="qwen3.5:0.8b",
+                                request_fn=lambda url, body: {"model":"qwen3.5:4b", "response":"wrong model"})
+
+    def test_08b_cli_is_dry_run_unless_opted_in(self):
+        with patch.object(r1, "_bounded_request",side_effect=AssertionError("UNEXPECTED_NETWORK")):
+            with contextlib.redirect_stdout(io.StringIO()) as captured:
+                rc = r1.main(["--windows-model", "qwen3.5:0.8b"])
+        self.assertEqual(rc,0)
+        self.assertIn("qwen3.5:0.8b", captured.getvalue())
+        self.assertIn("DRY_RUN_NO_INFERENCE",captured.getvalue())
+
     def test_immutable_windows_endpoint(self):
         with self.assertRaises(ValueError):
             r1._bounded_request("http://0.0.0.0:11434/api/generate",{})

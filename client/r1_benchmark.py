@@ -42,15 +42,17 @@ def model_parity(model_a: str, model_b: str, weights_sha_a=None, weights_sha_b=N
                        if exact else "unmatched_model_configuration_no_speedup_claim")}
 
 
-def plan() -> dict:
+def plan(windows_model: str = WINDOWS_MODEL) -> dict:
+    if windows_model not in ("qwen3.5:4b", "qwen3.5:0.8b"):
+        raise ValueError("Only approved local Ollama models are permitted")
     return {
         "research_id": "NANO-R1",
         "phase": "exploratory_unmatched_models",
-        "windows": {"model": WINDOWS_MODEL, "transport": "localhost_ollama",
+        "windows": {"model": windows_model, "transport": "localhost_ollama",
                     "cpu_forced": True, "gpu_execution_verified": False},
         "iphone": {"model": IPHONE_MODEL, "transport": "usb_loopback_pinned_https",
                    "foreground_required": True, "ane_execution_verified": False},
-        "parity": model_parity(WINDOWS_MODEL, IPHONE_MODEL),
+        "parity": model_parity(windows_model, IPHONE_MODEL),
         "max_new_tokens": MAX_TOKENS,
         "default_run": "DRY_RUN_NO_INFERENCE",
         "privacy": "metadata_only_no_prompt_response_or_credential_logs",
@@ -85,15 +87,17 @@ def _bounded_request(url: str, payload: dict, timeout: int = 95) -> dict:
 
 
 def run_windows_once(prompt: str, label: str, *, cpu_only: bool = True,
-                     request_fn=_bounded_request) -> dict:
+                     model: str = WINDOWS_MODEL, request_fn=_bounded_request) -> dict:
+    if model not in ("qwen3.5:4b", "qwen3.5:0.8b"):
+        raise ValueError("Only approved local Ollama models are permitted")
     opts = {"temperature": 0, "seed": 42, "num_predict": MAX_TOKENS,
             "num_gpu": 0 if cpu_only else 99}
-    payload = {"model": WINDOWS_MODEL, "prompt": prompt, "stream": False,
+    payload = {"model": model, "prompt": prompt, "stream": False,
                "think": False, "options": opts, "keep_alive": "1m"}
     start = time.perf_counter()
     response = request_fn(WINDOWS_API, payload)
     elapsed = time.perf_counter() - start
-    if response.get("model") not in (None, WINDOWS_MODEL):
+    if response.get("model") not in (None, model):
         raise ValueError("Ollama reported another model")
     if not isinstance(response.get("response"), str) or not response["response"].strip():
         raise ValueError("Empty Ollama generation")
@@ -102,7 +106,7 @@ def run_windows_once(prompt: str, label: str, *, cpu_only: bool = True,
     prompt_ns = response.get("prompt_eval_duration")
     return {
         "target": "windows_cpu" if cpu_only else "windows_gpu_candidate",
-        "model": WINDOWS_MODEL, "label": label, "success": True,
+        "model": model, "label": label, "success": True,
         "elapsed_wall_s": round(elapsed, 5),
         "completion_tokens_reported": eval_count if type(eval_count) is int and eval_count >= 0 else None,
         "decode_duration_s_reported": (round(duration_ns / 1e9, 5)
@@ -181,13 +185,15 @@ def main(argv=None):
     p = argparse.ArgumentParser(description="NANO R1 no-secret cross-device benchmark scaffold")
     p.add_argument("--execute", action="store_true",
                    help="Opt-in: run bounded inference on the selected local target")
+    p.add_argument("--windows-model", choices=("qwen3.5:4b", "qwen3.5:0.8b"),
+                   default=WINDOWS_MODEL)
     p.add_argument("--target", choices=("windows_cpu", "windows_gpu_candidate", "iphone_usb_coreml"),
                    default="windows_cpu")
     p.add_argument("--repeats", type=int, default=1)
     p.add_argument("--warmups", type=int, default=0)
     p.add_argument("--report", type=Path, help="Optional sanitized JSON report path")
     args = p.parse_args(argv)
-    info = plan()
+    info = plan(args.windows_model)
     if not args.execute:
         print(json.dumps(info, indent=2))
         return 0
@@ -201,10 +207,11 @@ def main(argv=None):
                 row = run_iphone_once(prompts[label], label)
             else:
                 row = run_windows_once(prompts[label], label,
-                                       cpu_only=args.target == "windows_cpu")
+                                       cpu_only=args.target == "windows_cpu",
+                                       model=args.windows_model)
         except (ValueError, RuntimeError, OSError, TimeoutError, json.JSONDecodeError) as exc:
             row = {"target": args.target, "model": (
-                    IPHONE_MODEL if args.target == "iphone_usb_coreml" else WINDOWS_MODEL),
+                    IPHONE_MODEL if args.target == "iphone_usb_coreml" else args.windows_model),
                    "label": label, "success": False,
                    "error_class": type(exc).__name__}
         row["phase"] = phase
