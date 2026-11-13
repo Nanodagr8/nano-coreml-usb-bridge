@@ -54,11 +54,13 @@ We have added a guarded [R1 benchmark harness](client/r1_benchmark.py) and publi
 
 ## R3 research: Windows host productivity during AI inference
 
-The [synchronized, position-balanced replication](docs/R3_SYNCHRONIZED_20261113.md) completed 25 windows, 72 correct measured requests, 100 validated worker intervals, and 24 matching Ollama placement snapshots. All six condition permutations were used. Relative to nearby baselines, median Windows hashing throughput changed by -10.88% during CPU inference, -7.49% during GPU inference, and -0.70% during iPhone inference. iPhone responses were slower. These are fixed-task observations, not a general speedup or energy claim.
+The [synchronized mixed-task replication](docs/R3_MIXED_TASKS_20261113.md) completed 25 windows, 72 correct measured answers (36 arithmetic and 36 format), 36 correct warmups, 100 validated worker intervals, and 24 matching Ollama placement snapshots. All six condition permutations were used.
 
-The [synchronized runner](client/r3_sync_burst_workload.py) defaults to a dry plan, accesses the phone only when explicitly selected, and writes new reports outside the repository. [Numeric evidence](results/r3_synchronized_permutations_20261113.json) includes the worker intervals and recomputable per-round statistics.
+Relative to nearby baselines, median Windows hashing throughput changed by -9.52% during CPU inference, -6.37% during GPU inference, and -1.03% during iPhone inference. iPhone responses were slower for both tasks. These are fixed-task observations, not a general speedup or energy claim.
 
-Earlier [placement-checked bursts](docs/R3_IPHONE_BURSTS_20261113.md) and [Windows-only pilots](docs/R3_SYSTEM_WORKLOAD_PILOT_20261113.md) remain separate historical studies.
+The [mixed-task runner](client/r3_mixed_burst_workload.py) defaults to a dry plan, accesses the phone only when explicitly selected, and writes new reports outside the repository. [Numeric evidence](results/r3_mixed_tasks_20261113.json) includes task labels, warmups, worker intervals, and recomputable summaries.
+
+Earlier [arithmetic-only synchronized measurements](docs/R3_SYNCHRONIZED_20261113.md), [placement-checked bursts](docs/R3_IPHONE_BURSTS_20261113.md), and [Windows-only pilots](docs/R3_SYSTEM_WORKLOAD_PILOT_20261113.md) remain separate historical studies.
 
 ## Built on existing work
 

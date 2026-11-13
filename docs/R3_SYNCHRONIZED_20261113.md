@@ -1,3 +1,5 @@
+> Arithmetic-only checkpoint. The [mixed-task follow-up](R3_MIXED_TASKS_20261113.md) adds exact-format requests and records both-task warmups. Datasets remain separate.
+
 # R3 synchronized, position-balanced replication
 
 November 13, 2026. Research draft; fixed-task observations, not a general offloading or efficiency claim.
