@@ -51,4 +51,3 @@ class BurstSafetyTests(unittest.TestCase):
                     b.main(args)
 if __name__=='__main__':
     unittest.main()
-
