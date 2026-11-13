@@ -1,3 +1,5 @@
+> Historical Windows-only checkpoint. For completed physical-iPhone measurements, see the [placement-checked burst follow-up](R3_IPHONE_BURSTS_20261113.md).
+
 # NANO R3 — system-level host productivity pilot (Windows only)
 
 **Experimental date:** November 13, 2026. **Status:** preliminary host-only pilot, **not** offloading proof.
@@ -21,7 +23,7 @@ The host's background workload is a fixed SHA-256 hash of a 256 KiB buffer execu
 | 4 | Windows CPU inference | 2 | 6,116.608 | 0.31044 | 2/2 |
 | 4 | Windows integrated GPU inference | 2 | 6,068.285 | 0.42076 | 2/2 |
 
-All **11 measurement windows completed** (7 Windows AI request completions; 4 baselines). Each background worker completed within its configured five-second compute window, and all AI requests finished while background work was running.
+All **11 measurement windows completed** (6 Windows AI request completions; 5 baselines). Each background worker completed within its configured five-second compute window, and all AI requests finished while background work was running.
 
 ### Interpretation
 

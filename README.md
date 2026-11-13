@@ -54,7 +54,9 @@ We have added a guarded [R1 benchmark harness](client/r1_benchmark.py) and publi
 
 ## R3 research: Windows host productivity during AI inference
 
-The [R3 system-workload pilot](docs/R3_SYSTEM_WORKLOAD_PILOT_20261113.md) measures bounded Windows CPU background work alongside local Qwen3.5 0.8B CPU/GPU inference, checks a fixed answer in memory, and records only sanitized metadata. The first [11 Windows-only observation windows](results/r3_windows_host_workload_pilots_20261113.json) completed, but **no iPhone offloading speedup or energy benefit has been demonstrated**. The optional physically paired iPhone condition remains pending foreground readiness and comparable application-level validation.
+The [physical-iPhone burst report](docs/R3_IPHONE_BURSTS_20261113.md) records 25 workload windows, 72 correct measured requests, and 24 matching Ollama CPU/GPU placement snapshots. Relative to nearby baselines, median Windows hashing throughput changed by -12.02% during CPU inference, -7.63% during GPU inference, and +0.05% during iPhone inference. iPhone responses were slower. This is a fixed-task trade-off, not a general speedup or energy claim.
+
+The [placement-checked burst runner](client/r3_burst_workload.py) defaults to a dry run and keeps reports outside the repository. [Numeric observations](results/r3_iphone_placement_bursts_20261113.json) allow the reported statistics to be independently recomputed. Earlier [Windows-only pilots](docs/R3_SYSTEM_WORKLOAD_PILOT_20261113.md) remain historical context.
 
 ## Built on existing work
 
