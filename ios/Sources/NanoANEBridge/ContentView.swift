@@ -1,4 +1,5 @@
 import SwiftUI
+import UIKit
 import CoreMLLLM
 import UniformTypeIdentifiers
 
@@ -369,13 +370,16 @@ struct ContentView: View {
                 tlsStatus = message
                 if message.hasPrefix("TLS listener failed") {
                     tlsActive = false
+                    UIApplication.shared.isIdleTimerDisabled = false
                     tlsServer = nil
                 }
             }
             try server.startExplicitly(secret: usbBearerToken,
                 identityLabel: NeuralIdentityProvisioner.identityLabel)
             tlsServer = server
+            // Prevent auto-lock only while the user-started USB service is active.
             tlsActive = true
+            UIApplication.shared.isIdleTimerDisabled = true
             tlsStatus = "Opening secure USB loopback listener; waiting for iOS ready state."
         } catch let reason as NeuralForegroundTLSServer.ActivationError {
             switch reason {
@@ -398,6 +402,7 @@ struct ContentView: View {
         tlsServer?.stop()
         tlsServer = nil
         tlsActive = false
+        UIApplication.shared.isIdleTimerDisabled = false
         usbBearerToken = ""
         tlsStatus = "Secure USB service is off."
     }
