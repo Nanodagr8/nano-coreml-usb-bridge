@@ -1,0 +1,82 @@
+{
+  "schema": "nano-r2-windows-balanced-analysis-v1",
+  "paired_blocks": 6,
+  "measured_samples_total": 60,
+  "conditions": {
+    "windows_cpu": {
+      "measured_n": 30,
+      "median_wall_seconds": 1.4135,
+      "mean_wall_seconds": 1.42731,
+      "median_reported_decode_tps": 17.052,
+      "min_output_tokens": 22,
+      "max_output_tokens": 22
+    },
+    "windows_gpu_candidate": {
+      "measured_n": 30,
+      "median_wall_seconds": 1.02211,
+      "mean_wall_seconds": 1.04404,
+      "median_reported_decode_tps": 24.486,
+      "min_output_tokens": 22,
+      "max_output_tokens": 22
+    }
+  },
+  "per_pair": [
+    {
+      "pair": 0,
+      "cpu_median_wall_s": 1.3928,
+      "gpu_median_wall_s": 1.00517,
+      "gpu_vs_cpu_wall_speed_ratio": 1.38564,
+      "gpu_wall_latency_reduction_pct": 27.831
+    },
+    {
+      "pair": 1,
+      "cpu_median_wall_s": 1.44477,
+      "gpu_median_wall_s": 1.0109,
+      "gpu_vs_cpu_wall_speed_ratio": 1.42919,
+      "gpu_wall_latency_reduction_pct": 30.03
+    },
+    {
+      "pair": 2,
+      "cpu_median_wall_s": 1.40781,
+      "gpu_median_wall_s": 0.99552,
+      "gpu_vs_cpu_wall_speed_ratio": 1.41415,
+      "gpu_wall_latency_reduction_pct": 29.286
+    },
+    {
+      "pair": 3,
+      "cpu_median_wall_s": 1.38825,
+      "gpu_median_wall_s": 1.01911,
+      "gpu_vs_cpu_wall_speed_ratio": 1.36222,
+      "gpu_wall_latency_reduction_pct": 26.59
+    },
+    {
+      "pair": 4,
+      "cpu_median_wall_s": 1.51097,
+      "gpu_median_wall_s": 1.0078,
+      "gpu_vs_cpu_wall_speed_ratio": 1.49928,
+      "gpu_wall_latency_reduction_pct": 33.301
+    },
+    {
+      "pair": 5,
+      "cpu_median_wall_s": 1.4554,
+      "gpu_median_wall_s": 1.15252,
+      "gpu_vs_cpu_wall_speed_ratio": 1.2628,
+      "gpu_wall_latency_reduction_pct": 20.811
+    }
+  ],
+  "gpu_vs_cpu_geometric_mean_wall_speed_ratio": 1.3903,
+  "paired_block_bootstrap_95pct_CI": [
+    1.328,
+    1.4471
+  ],
+  "confidence_method": "percentile bootstrap resampling six paired block medians; descriptive only",
+  "statistical_caveats": [
+    "Six pairs are not guaranteed independent; warm-cache and thermal order remain potential confounds",
+    "Reported CPU/GPU processor residency from Ollama ps, no independent kernel trace",
+    "No sample text or output quality adjudication, no power/energy measurement",
+    "No iPhone or Core ML comparison; cross-device weight quantization does not match"
+  ],
+  "iPhone_benchmarked": false,
+  "cross_device_offloading_speedup_proved": false,
+  "source_public_report_sha256": "5d5c089f64420aeb6c90e21152bfcafc6c7ffb936986c319faf8030e60aeaeeb"
+}
