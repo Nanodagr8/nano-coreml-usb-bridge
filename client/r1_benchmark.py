@@ -18,7 +18,7 @@ import time
 from urllib.error import HTTPError, URLError
 from urllib.request import ProxyHandler, Request, build_opener
 
-from nano_usb_client import NanoUSBClient
+from nano_usb_client import NanoUSBClient, PinMismatch, AuthenticationError, TransportError
 
 WINDOWS_MODEL = "qwen3.5:4b"
 IPHONE_MODEL = "qwen3.5-0.8b"
@@ -128,6 +128,8 @@ def run_iphone_once(prompt: str, label: str, *, client=None) -> dict:
     start = time.perf_counter()
     response = client.generate(prompt, MAX_TOKENS)
     elapsed = time.perf_counter() - start
+    if not isinstance(response.get("text"), str) or not response["text"].strip():
+        raise ValueError("iPhone generation returned no visible text")
     return {
         "target": "iphone_usb_coreml", "model": IPHONE_MODEL, "label": label,
         "success": True, "elapsed_wall_s": round(elapsed, 5),
@@ -209,7 +211,9 @@ def main(argv=None):
                 row = run_windows_once(prompts[label], label,
                                        cpu_only=args.target == "windows_cpu",
                                        model=args.windows_model)
-        except (ValueError, RuntimeError, OSError, TimeoutError, json.JSONDecodeError) as exc:
+        except (ValueError, RuntimeError, OSError, TimeoutError,
+                json.JSONDecodeError, PinMismatch, AuthenticationError,
+                TransportError) as exc:
             row = {"target": args.target, "model": (
                     IPHONE_MODEL if args.target == "iphone_usb_coreml" else args.windows_model),
                    "label": label, "success": False,

@@ -75,6 +75,13 @@ class R1Tests(unittest.TestCase):
         self.assertIsNone(row["completion_tokens_reported"])
         self.assertFalse(row["hardware_placement_verified"])
 
+    def test_iphone_empty_text_is_rejected(self):
+        class FakeEmpty:
+            def generate(self,prompt,max_tokens):
+                return {"model_id":r1.IPHONE_MODEL, "text":" "}
+        with self.assertRaises(ValueError):
+            r1.run_iphone_once("public synthetic prompt","short",client=FakeEmpty())
+
     def test_summary_no_cross_model_speedup(self):
         rows=[{"target":"windows_cpu","label":"short","phase":"measurement",
                "success":True,"elapsed_wall_s":2.5},
