@@ -52,6 +52,10 @@ Do not put credentials or certificates into Git. Follow [reproduction steps](doc
 
 We have added a guarded [R1 benchmark harness](client/r1_benchmark.py) and published a [sanitized Windows CPU/GPU exploratory dataset](results/r1_qwen35_08b_windows_exploratory.json), with a [results report](docs/R1_08B_WINDOWS_RESULTS_20261113.md). Both Windows conditions use Ollama Qwen3.5 0.8B Q8_0; the tests are **not** an iPhone comparison or a proven offloading speedup. GPU/CPU attribution comes from Ollama's reported PROCESSOR status; the iPhone's Core ML weight equivalence and ANE execution still require independent verification.
 
+## R3 research: Windows host productivity during AI inference
+
+The [R3 system-workload pilot](docs/R3_SYSTEM_WORKLOAD_PILOT_20261113.md) measures bounded Windows CPU background work alongside local Qwen3.5 0.8B CPU/GPU inference, checks a fixed answer in memory, and records only sanitized metadata. The first [11 Windows-only observation windows](results/r3_windows_host_workload_pilots_20261113.json) completed, but **no iPhone offloading speedup or energy benefit has been demonstrated**. The optional physically paired iPhone condition remains pending foreground readiness and comparable application-level validation.
+
 ## Built on existing work
 
 NANO Studios integrates [CoreML-LLM](https://github.com/john-rocky/CoreML-LLM) (MIT) and [Swift Transformers](https://github.com/huggingface/swift-transformers) (Apache-2.0). The USB interface uses concepts implemented by [pymobiledevice3](https://github.com/doronz88/pymobiledevice3); it is not included or modified here. Model weights and upstream dependencies retain their own respective licenses.
