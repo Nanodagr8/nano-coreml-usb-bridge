@@ -1,3 +1,5 @@
+> Deterministic-order checkpoint. See the [preregistered randomized-order replication](R3_RANDOMIZED_20261113.md) for the later study. Datasets remain separate.
+
 # R3 synchronized mixed-task replication
 
 November 13, 2026. Research draft. This extends the [arithmetic-only synchronized study](R3_SYNCHRONIZED_20261113.md) with an exact-format task. Datasets are separate and are not pooled.

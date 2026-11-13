@@ -54,13 +54,13 @@ We have added a guarded [R1 benchmark harness](client/r1_benchmark.py) and publi
 
 ## R3 research: Windows host productivity during AI inference
 
-The [synchronized mixed-task replication](docs/R3_MIXED_TASKS_20261113.md) completed 25 windows, 72 correct measured answers (36 arithmetic and 36 format), 36 correct warmups, 100 validated worker intervals, and 24 matching Ollama placement snapshots. All six condition permutations were used.
+The [preregistered randomized-order replication](docs/R3_RANDOMIZED_20261113.md) completed 25 windows, 72 correct measured answers, 36 correct warmups, 100 validated worker intervals, and 24 matching Ollama placement snapshots. Its public seed, condition order, primary outcome, and stop rules were registered before the full run.
 
-Relative to nearby baselines, median Windows hashing throughput changed by -9.52% during CPU inference, -6.37% during GPU inference, and -1.03% during iPhone inference. iPhone responses were slower for both tasks. These are fixed-task observations, not a general speedup or energy claim.
+The registered primary result was +9.77% median Windows host hashing throughput with iPhone inference versus CPU inference, with all six round differences positive. Median request latency was slower on iPhone (0.71023 s) than CPU (0.30502 s). These are fixed-task observations, not a general offloading or energy advantage.
 
-The [mixed-task runner](client/r3_mixed_burst_workload.py) defaults to a dry plan, accesses the phone only when explicitly selected, and writes new reports outside the repository. [Numeric evidence](results/r3_mixed_tasks_20261113.json) includes task labels, warmups, worker intervals, and recomputable summaries.
+The [registered runner](client/r3_randomized_mixed_workload.py) defaults to a dry plan and verifies the exact [protocol bytes](results/r3_randomized_protocol_20261113.json). [Numeric evidence](results/r3_randomized_mixed_20261113.json) includes task results, warmups, worker intervals, registration timing, and recomputable outcomes.
 
-Earlier [arithmetic-only synchronized measurements](docs/R3_SYNCHRONIZED_20261113.md), [placement-checked bursts](docs/R3_IPHONE_BURSTS_20261113.md), and [Windows-only pilots](docs/R3_SYSTEM_WORKLOAD_PILOT_20261113.md) remain separate historical studies.
+Earlier [deterministic mixed-task](docs/R3_MIXED_TASKS_20261113.md), [arithmetic-only synchronized](docs/R3_SYNCHRONIZED_20261113.md), [placement burst](docs/R3_IPHONE_BURSTS_20261113.md), and [Windows-only pilot](docs/R3_SYSTEM_WORKLOAD_PILOT_20261113.md) studies remain separate.
 
 ## Built on existing work
 
