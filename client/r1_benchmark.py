@@ -130,12 +130,40 @@ def run_iphone_once(prompt: str, label: str, *, client=None) -> dict:
     elapsed = time.perf_counter() - start
     if not isinstance(response.get("text"), str) or not response["text"].strip():
         raise ValueError("iPhone generation returned no visible text")
+    completion = response.get("completion_tokens")
+    if completion is not None:
+        if type(completion) is not int or not (0 <= completion <= MAX_TOKENS):
+            raise ValueError("iPhone returned invalid generated-token count")
+        if response.get("metrics_source") != "on_device_coreml_generator":
+            raise ValueError("iPhone token count lacks a recognized source")
+    numeric_metrics = (
+        "model_elapsed_ms", "prefill_ms", "generator_tokens_per_second"
+    )
+    for field in numeric_metrics:
+        value = response.get(field)
+        if value is not None and (
+            type(value) not in (float, int) or not math.isfinite(value)
+            or value < 0
+        ):
+            raise ValueError("iPhone returned invalid numeric telemetry")
+        if value is not None and completion is None:
+            raise ValueError("iPhone timing telemetry missing token-count source")
     return {
         "target": "iphone_usb_coreml", "model": IPHONE_MODEL, "label": label,
         "success": True, "elapsed_wall_s": round(elapsed, 5),
-        "completion_tokens_reported": None,
+        "completion_tokens_reported": completion,
+        "completion_token_source": (
+            "on_device_coreml_generator" if completion is not None
+            else "unavailable_on_v10"
+        ),
+        "model_elapsed_ms_reported": response.get("model_elapsed_ms"),
+        "generator_decode_tokens_per_second_reported":
+            response.get("generator_tokens_per_second"),
         "decode_duration_s_reported": None,
-        "prefill_duration_s_reported": None,
+        "prefill_duration_s_reported": (
+            round(response["prefill_ms"] / 1000, 6)
+            if response.get("prefill_ms") is not None else None
+        ),
         "hardware_placement_verified": False,
         "hardware_evidence": "compute_preference_not_ane_operation_trace",
         "output_nonempty": bool(response.get("text", "").strip()),

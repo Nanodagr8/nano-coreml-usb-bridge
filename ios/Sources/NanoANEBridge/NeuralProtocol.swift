@@ -33,12 +33,24 @@ struct NeuralGenerationResult: Encodable {
     let text: String
     let hardwareVerified: Bool
     let hardwareUnit: String
+    // Optional numeric telemetry only; never infer execution hardware from it.
+    // Omitted by old servers, so existing clients remain compatible.
+    let completionTokens: Int?
+    let modelElapsedMs: Double?
+    let generatorTokensPerSecond: Double?
+    let prefillMs: Double?
+    let metricsSource: String?
 
     enum CodingKeys: String, CodingKey {
         case modelID = "model_id"
         case text
         case hardwareVerified = "hardware_verified"
         case hardwareUnit = "hardware_unit"
+        case completionTokens = "completion_tokens"
+        case modelElapsedMs = "model_elapsed_ms"
+        case generatorTokensPerSecond = "generator_tokens_per_second"
+        case prefillMs = "prefill_ms"
+        case metricsSource = "metrics_source"
     }
 }
 
@@ -83,9 +95,21 @@ enum NeuralProtocol {
         return try RequestGuard.validate(InferenceRequest(prompt: input.prompt, maxTokens: input.maxTokens))
     }
 
-    static func makeGenerationResponse(text: String) -> NeuralGenerationResult {
-        NeuralGenerationResult(modelID: modelID, text: text,
-                               hardwareVerified: false, hardwareUnit: "unverified")
+    static func makeGenerationResponse(
+        text: String,
+        completionTokens: Int? = nil,
+        modelElapsedMs: Double? = nil,
+        generatorTokensPerSecond: Double? = nil,
+        prefillMs: Double? = nil
+    ) -> NeuralGenerationResult {
+        NeuralGenerationResult(
+            modelID: modelID, text: text,
+            hardwareVerified: false, hardwareUnit: "unverified",
+            completionTokens: completionTokens,
+            modelElapsedMs: modelElapsedMs,
+            generatorTokensPerSecond: generatorTokensPerSecond,
+            prefillMs: prefillMs,
+            metricsSource: completionTokens == nil ? nil : "on_device_coreml_generator")
     }
 
     static func makeStatusResponse(
