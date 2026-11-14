@@ -1,0 +1,448 @@
+{
+  "schema": "nano-r5-coding-quality-v1",
+  "stage": "study",
+  "protocol_sha256": "c1533bd659b24e113a6d1e12b5801d018302b2f03f2efc0ad4efb8733588979f",
+  "source_sha256": {
+    "r5_coding_quality.py": "d479f43ff7e9003333478c8003c41d5a7f62a3eed6fedbddc616668b46e84184",
+    "nano_usb_client.py": "f50f30a645f3dcf842422b03de49725a9fedf45deb1ea9846820b68a169b92a1",
+    "r4_foreground_reliability.py": "a452f56b5e7ba3f3b6a307656d10067e4289eb997ebeb0881b92b8ab54469f2b"
+  },
+  "started_utc": "2026-11-14T14:44:54.035098+00:00",
+  "finished_utc": "2026-11-14T14:46:23.329543+00:00",
+  "complete": true,
+  "stop": null,
+  "samples": [
+    {
+      "case_id": "py_inclusive_range",
+      "target": "windows_cpu",
+      "model_id": "qwen3.5:0.8b",
+      "passed_rubric": true,
+      "response_sha256": "79e9579e4089c53357e0c6534772f29bd373fb1ca260ead10d9e7cfda40be868",
+      "completion_tokens": 9,
+      "wall_s": 3.231215,
+      "model_elapsed_s": 0.265052,
+      "metrics_source": "ollama_reported"
+    },
+    {
+      "case_id": "py_inclusive_range",
+      "target": "windows_gpu_candidate",
+      "model_id": "qwen3.5:0.8b",
+      "passed_rubric": true,
+      "response_sha256": "79e9579e4089c53357e0c6534772f29bd373fb1ca260ead10d9e7cfda40be868",
+      "completion_tokens": 9,
+      "wall_s": 4.014866,
+      "model_elapsed_s": 0.196407,
+      "metrics_source": "ollama_reported"
+    },
+    {
+      "case_id": "py_inclusive_range",
+      "target": "iphone_usb_coreml",
+      "model_id": "qwen3.5-0.8b",
+      "passed_rubric": false,
+      "response_sha256": "bba374b3839f5e2f445bcd7219555bd4df6d2d908e193707e9e83c9d21d41e68",
+      "completion_tokens": 53,
+      "wall_s": 2.606726,
+      "model_elapsed_s": 2.587358,
+      "metrics_source": "on_device_coreml_generator"
+    },
+    {
+      "case_id": "py_bool_token_guard",
+      "target": "windows_cpu",
+      "model_id": "qwen3.5:0.8b",
+      "passed_rubric": true,
+      "response_sha256": "5bb1a960083403a121a80f84040dba28232bba2b9ac4299048a9aad33096621b",
+      "completion_tokens": 15,
+      "wall_s": 3.688824,
+      "model_elapsed_s": 0.427855,
+      "metrics_source": "ollama_reported"
+    },
+    {
+      "case_id": "py_bool_token_guard",
+      "target": "iphone_usb_coreml",
+      "model_id": "qwen3.5-0.8b",
+      "passed_rubric": true,
+      "response_sha256": "5bb1a960083403a121a80f84040dba28232bba2b9ac4299048a9aad33096621b",
+      "completion_tokens": 14,
+      "wall_s": 1.691883,
+      "model_elapsed_s": 1.672309,
+      "metrics_source": "on_device_coreml_generator"
+    },
+    {
+      "case_id": "py_bool_token_guard",
+      "target": "windows_gpu_candidate",
+      "model_id": "qwen3.5:0.8b",
+      "passed_rubric": false,
+      "response_sha256": "756d863bf0bccd025596fdcf7ced6fc7b257b39e97abfde79e9ffdef77e3b2e9",
+      "completion_tokens": 15,
+      "wall_s": 3.823398,
+      "model_elapsed_s": 0.324767,
+      "metrics_source": "ollama_reported"
+    },
+    {
+      "case_id": "py_owned_cancel",
+      "target": "windows_gpu_candidate",
+      "model_id": "qwen3.5:0.8b",
+      "passed_rubric": false,
+      "response_sha256": "5943cb00e77b7cfc9ea5b25dcbe4211cbac4eb712df53b3b11d519f4d7d980c9",
+      "completion_tokens": 13,
+      "wall_s": 0.802043,
+      "model_elapsed_s": 0.423156,
+      "metrics_source": "ollama_reported"
+    },
+    {
+      "case_id": "py_owned_cancel",
+      "target": "windows_cpu",
+      "model_id": "qwen3.5:0.8b",
+      "passed_rubric": false,
+      "response_sha256": "5943cb00e77b7cfc9ea5b25dcbe4211cbac4eb712df53b3b11d519f4d7d980c9",
+      "completion_tokens": 13,
+      "wall_s": 3.568501,
+      "model_elapsed_s": 0.574078,
+      "metrics_source": "ollama_reported"
+    },
+    {
+      "case_id": "py_owned_cancel",
+      "target": "iphone_usb_coreml",
+      "model_id": "qwen3.5-0.8b",
+      "passed_rubric": false,
+      "response_sha256": "6baf85570078759c3cd247d84e2d9b89bccbbdf082870721aa0e6602101168cc",
+      "completion_tokens": 4,
+      "wall_s": 1.474881,
+      "model_elapsed_s": 1.455342,
+      "metrics_source": "on_device_coreml_generator"
+    },
+    {
+      "case_id": "py_safe_lookup",
+      "target": "windows_gpu_candidate",
+      "model_id": "qwen3.5:0.8b",
+      "passed_rubric": false,
+      "response_sha256": "0dc3f92b3180bb2c8df766799c89d98d345ed94fec6866dfca0ae744711c559a",
+      "completion_tokens": 10,
+      "wall_s": 4.30361,
+      "model_elapsed_s": 0.268938,
+      "metrics_source": "ollama_reported"
+    },
+    {
+      "case_id": "py_safe_lookup",
+      "target": "iphone_usb_coreml",
+      "model_id": "qwen3.5-0.8b",
+      "passed_rubric": false,
+      "response_sha256": "dfa014454a2850b09663535e7f95f60881c6f41b351bb87c45c2e4d8d1135741",
+      "completion_tokens": 21,
+      "wall_s": 1.790192,
+      "model_elapsed_s": 1.777325,
+      "metrics_source": "on_device_coreml_generator"
+    },
+    {
+      "case_id": "py_safe_lookup",
+      "target": "windows_cpu",
+      "model_id": "qwen3.5:0.8b",
+      "passed_rubric": false,
+      "response_sha256": "0dc3f92b3180bb2c8df766799c89d98d345ed94fec6866dfca0ae744711c559a",
+      "completion_tokens": 10,
+      "wall_s": 3.100128,
+      "model_elapsed_s": 0.38438,
+      "metrics_source": "ollama_reported"
+    },
+    {
+      "case_id": "py_cap_tokens",
+      "target": "iphone_usb_coreml",
+      "model_id": "qwen3.5-0.8b",
+      "passed_rubric": false,
+      "response_sha256": "dc0914576acd8e3d0a5423a08b63de9e40b99c4bf0aba6730407703c010fc097",
+      "completion_tokens": 6,
+      "wall_s": 1.463905,
+      "model_elapsed_s": 1.446474,
+      "metrics_source": "on_device_coreml_generator"
+    },
+    {
+      "case_id": "py_cap_tokens",
+      "target": "windows_cpu",
+      "model_id": "qwen3.5:0.8b",
+      "passed_rubric": false,
+      "response_sha256": "006c74ca070feb3934c43b151514cb7167de38d5e634f9a2f79d20e44cdb0a63",
+      "completion_tokens": 9,
+      "wall_s": 0.79703,
+      "model_elapsed_s": 0.288136,
+      "metrics_source": "ollama_reported"
+    },
+    {
+      "case_id": "py_cap_tokens",
+      "target": "windows_gpu_candidate",
+      "model_id": "qwen3.5:0.8b",
+      "passed_rubric": false,
+      "response_sha256": "62bc3e345ad02bfb6fa382615c3d95f12795bab3354490a9273c1fb9b5d6335a",
+      "completion_tokens": 12,
+      "wall_s": 4.068551,
+      "model_elapsed_s": 0.317294,
+      "metrics_source": "ollama_reported"
+    },
+    {
+      "case_id": "py_fresh_list",
+      "target": "iphone_usb_coreml",
+      "model_id": "qwen3.5-0.8b",
+      "passed_rubric": false,
+      "response_sha256": "82a128737d0d1a1500a0bf4f9379b51222a2d9cce09026d45732159827430656",
+      "completion_tokens": 16,
+      "wall_s": 1.705136,
+      "model_elapsed_s": 1.68622,
+      "metrics_source": "on_device_coreml_generator"
+    },
+    {
+      "case_id": "py_fresh_list",
+      "target": "windows_gpu_candidate",
+      "model_id": "qwen3.5:0.8b",
+      "passed_rubric": false,
+      "response_sha256": "5d157e56396b088b623460c24b2fef89dc05e89fb55d4c72279d665d3aab3964",
+      "completion_tokens": 12,
+      "wall_s": 0.817669,
+      "model_elapsed_s": 0.392576,
+      "metrics_source": "ollama_reported"
+    },
+    {
+      "case_id": "py_fresh_list",
+      "target": "windows_cpu",
+      "model_id": "qwen3.5:0.8b",
+      "passed_rubric": false,
+      "response_sha256": "5d157e56396b088b623460c24b2fef89dc05e89fb55d4c72279d665d3aab3964",
+      "completion_tokens": 12,
+      "wall_s": 3.145255,
+      "model_elapsed_s": 0.441774,
+      "metrics_source": "ollama_reported"
+    },
+    {
+      "case_id": "py_slice_trace",
+      "target": "windows_cpu",
+      "model_id": "qwen3.5:0.8b",
+      "passed_rubric": true,
+      "response_sha256": "4e3970018fa500922ce5c087f84c734d7b47b0651da2f2e17226801885838032",
+      "completion_tokens": 7,
+      "wall_s": 0.758182,
+      "model_elapsed_s": 0.291741,
+      "metrics_source": "ollama_reported"
+    },
+    {
+      "case_id": "py_slice_trace",
+      "target": "windows_gpu_candidate",
+      "model_id": "qwen3.5:0.8b",
+      "passed_rubric": true,
+      "response_sha256": "4e3970018fa500922ce5c087f84c734d7b47b0651da2f2e17226801885838032",
+      "completion_tokens": 7,
+      "wall_s": 3.664341,
+      "model_elapsed_s": 0.202955,
+      "metrics_source": "ollama_reported"
+    },
+    {
+      "case_id": "py_slice_trace",
+      "target": "iphone_usb_coreml",
+      "model_id": "qwen3.5-0.8b",
+      "passed_rubric": true,
+      "response_sha256": "4e3970018fa500922ce5c087f84c734d7b47b0651da2f2e17226801885838032",
+      "completion_tokens": 6,
+      "wall_s": 1.403376,
+      "model_elapsed_s": 1.386277,
+      "metrics_source": "on_device_coreml_generator"
+    },
+    {
+      "case_id": "py_bool_trace",
+      "target": "windows_cpu",
+      "model_id": "qwen3.5:0.8b",
+      "passed_rubric": false,
+      "response_sha256": "d4a38ddf3e6fa41d4aa02aa140da3fe44f3a266c1ac57f4ad7b0af6939c85e1a",
+      "completion_tokens": 6,
+      "wall_s": 3.190952,
+      "model_elapsed_s": 0.272681,
+      "metrics_source": "ollama_reported"
+    },
+    {
+      "case_id": "py_bool_trace",
+      "target": "iphone_usb_coreml",
+      "model_id": "qwen3.5-0.8b",
+      "passed_rubric": false,
+      "response_sha256": "d4a38ddf3e6fa41d4aa02aa140da3fe44f3a266c1ac57f4ad7b0af6939c85e1a",
+      "completion_tokens": 5,
+      "wall_s": 1.279303,
+      "model_elapsed_s": 1.2592,
+      "metrics_source": "on_device_coreml_generator"
+    },
+    {
+      "case_id": "py_bool_trace",
+      "target": "windows_gpu_candidate",
+      "model_id": "qwen3.5:0.8b",
+      "passed_rubric": false,
+      "response_sha256": "d4a38ddf3e6fa41d4aa02aa140da3fe44f3a266c1ac57f4ad7b0af6939c85e1a",
+      "completion_tokens": 6,
+      "wall_s": 3.918441,
+      "model_elapsed_s": 0.194996,
+      "metrics_source": "ollama_reported"
+    },
+    {
+      "case_id": "py_finally_trace",
+      "target": "windows_gpu_candidate",
+      "model_id": "qwen3.5:0.8b",
+      "passed_rubric": true,
+      "response_sha256": "c04fae95a0113aa01ae03fa93a17df25384541a8496e691059718792e5738325",
+      "completion_tokens": 7,
+      "wall_s": 0.543543,
+      "model_elapsed_s": 0.196694,
+      "metrics_source": "ollama_reported"
+    },
+    {
+      "case_id": "py_finally_trace",
+      "target": "windows_cpu",
+      "model_id": "qwen3.5:0.8b",
+      "passed_rubric": true,
+      "response_sha256": "c04fae95a0113aa01ae03fa93a17df25384541a8496e691059718792e5738325",
+      "completion_tokens": 7,
+      "wall_s": 3.333984,
+      "model_elapsed_s": 0.303394,
+      "metrics_source": "ollama_reported"
+    },
+    {
+      "case_id": "py_finally_trace",
+      "target": "iphone_usb_coreml",
+      "model_id": "qwen3.5-0.8b",
+      "passed_rubric": true,
+      "response_sha256": "c04fae95a0113aa01ae03fa93a17df25384541a8496e691059718792e5738325",
+      "completion_tokens": 6,
+      "wall_s": 1.652186,
+      "model_elapsed_s": 1.633082,
+      "metrics_source": "on_device_coreml_generator"
+    },
+    {
+      "case_id": "py_dedupe_trace",
+      "target": "windows_gpu_candidate",
+      "model_id": "qwen3.5:0.8b",
+      "passed_rubric": false,
+      "response_sha256": "d33b202c020cbde1c4a7bb26d0b02e66645407dcef42c63543cff899b8f979c8",
+      "completion_tokens": 10,
+      "wall_s": 4.46075,
+      "model_elapsed_s": 0.372692,
+      "metrics_source": "ollama_reported"
+    },
+    {
+      "case_id": "py_dedupe_trace",
+      "target": "iphone_usb_coreml",
+      "model_id": "qwen3.5-0.8b",
+      "passed_rubric": false,
+      "response_sha256": "3554d2b8a1e34099053865de8576d1460b807430ec8c6b85315c9607ba93d308",
+      "completion_tokens": 6,
+      "wall_s": 1.272418,
+      "model_elapsed_s": 1.254957,
+      "metrics_source": "on_device_coreml_generator"
+    },
+    {
+      "case_id": "py_dedupe_trace",
+      "target": "windows_cpu",
+      "model_id": "qwen3.5:0.8b",
+      "passed_rubric": false,
+      "response_sha256": "d33b202c020cbde1c4a7bb26d0b02e66645407dcef42c63543cff899b8f979c8",
+      "completion_tokens": 10,
+      "wall_s": 4.046602,
+      "model_elapsed_s": 0.526936,
+      "metrics_source": "ollama_reported"
+    },
+    {
+      "case_id": "ts_filter_trace",
+      "target": "iphone_usb_coreml",
+      "model_id": "qwen3.5-0.8b",
+      "passed_rubric": false,
+      "response_sha256": "3a316d6d3226f84c1e46e4447fa8d5fd800bff4a1bc6498152523cd4a602b69b",
+      "completion_tokens": 6,
+      "wall_s": 1.851292,
+      "model_elapsed_s": 1.830933,
+      "metrics_source": "on_device_coreml_generator"
+    },
+    {
+      "case_id": "ts_filter_trace",
+      "target": "windows_cpu",
+      "model_id": "qwen3.5:0.8b",
+      "passed_rubric": false,
+      "response_sha256": "4e3970018fa500922ce5c087f84c734d7b47b0651da2f2e17226801885838032",
+      "completion_tokens": 7,
+      "wall_s": 0.885876,
+      "model_elapsed_s": 0.199036,
+      "metrics_source": "ollama_reported"
+    },
+    {
+      "case_id": "ts_filter_trace",
+      "target": "windows_gpu_candidate",
+      "model_id": "qwen3.5:0.8b",
+      "passed_rubric": false,
+      "response_sha256": "4e3970018fa500922ce5c087f84c734d7b47b0651da2f2e17226801885838032",
+      "completion_tokens": 7,
+      "wall_s": 4.668411,
+      "model_elapsed_s": 0.177258,
+      "metrics_source": "ollama_reported"
+    },
+    {
+      "case_id": "swift_clamp_trace",
+      "target": "iphone_usb_coreml",
+      "model_id": "qwen3.5-0.8b",
+      "passed_rubric": true,
+      "response_sha256": "e29c9c180c6279b0b02abd6a1801c7c04082cf486ec027aa13515e4f3884bb6b",
+      "completion_tokens": 2,
+      "wall_s": 1.267538,
+      "model_elapsed_s": 1.252783,
+      "metrics_source": "on_device_coreml_generator"
+    },
+    {
+      "case_id": "swift_clamp_trace",
+      "target": "windows_gpu_candidate",
+      "model_id": "qwen3.5:0.8b",
+      "passed_rubric": false,
+      "response_sha256": "48449a14a4ff7d79bb7a1b6f3d488eba397c36ef25634c111b49baf362511afc",
+      "completion_tokens": 3,
+      "wall_s": 0.560411,
+      "model_elapsed_s": 0.08128,
+      "metrics_source": "ollama_reported"
+    },
+    {
+      "case_id": "swift_clamp_trace",
+      "target": "windows_cpu",
+      "model_id": "qwen3.5:0.8b",
+      "passed_rubric": false,
+      "response_sha256": "4b227777d4dd1fc61c6f884f48641d02b4d121d3fd328cb08b5531fcacdabf8a",
+      "completion_tokens": 2,
+      "wall_s": 3.851751,
+      "model_elapsed_s": 0.103272,
+      "metrics_source": "ollama_reported"
+    }
+  ],
+  "status_checks_passed": 2,
+  "generation_attempts": 36,
+  "observed_elapsed_s": 89.291071,
+  "hardware_placement_verified": false,
+  "model_parity_verified": false,
+  "runtime_build_attested": false,
+  "energy_measured": false,
+  "generated_code_executed": false,
+  "raw_response_saved": false,
+  "automatic_retries": false,
+  "protected_configuration_unchanged": true,
+  "registration_url": "https://github.com/Nanodagr8/nano-coreml-usb-bridge/issues/4#issuecomment-6879060537",
+  "registration_created_utc": "2026-11-14T14:44:13Z",
+  "source_report_sha256": "e9ff2eb4d81d8708775a0e3d140c8b4ec3d58f99a58056e2cd9c0fcbc6898c5b",
+  "analysis": {
+    "complete": true,
+    "completed_requests": 36,
+    "by_target": {
+      "windows_cpu": {
+        "passed": 4,
+        "attempted_and_scored": 12,
+        "median_wall_s": 3.2110835
+      },
+      "windows_gpu_candidate": {
+        "passed": 3,
+        "attempted_and_scored": 12,
+        "median_wall_s": 3.8709195000000003
+      },
+      "iphone_usb_coreml": {
+        "passed": 4,
+        "attempted_and_scored": 12,
+        "median_wall_s": 1.5635335000000001
+      }
+    },
+    "claim": "Descriptive fixed-suite qualification only; no productivity or hardware-speed ranking."
+  }
+}

@@ -1,0 +1,179 @@
+{
+  "schema": "nano-r6-fixture-qualification-v1",
+  "scope": "offline_synthetic_fixtures_only",
+  "complete": true,
+  "fixture_count": 20,
+  "passed": 20,
+  "fixtures": [
+    {
+      "fixture_id": "exact_python",
+      "expected_classification": "exact_match",
+      "classification": "exact_match",
+      "passed": true,
+      "strict_pass": true,
+      "normalized_pass": true
+    },
+    {
+      "fixture_id": "whitespace",
+      "expected_classification": "exact_match",
+      "classification": "exact_match",
+      "passed": true,
+      "strict_pass": true,
+      "normalized_pass": true
+    },
+    {
+      "fixture_id": "fenced_python",
+      "expected_classification": "code_fence_normalized",
+      "classification": "code_fence_normalized",
+      "passed": true,
+      "strict_pass": false,
+      "normalized_pass": true
+    },
+    {
+      "fixture_id": "bare_fence",
+      "expected_classification": "code_fence_normalized",
+      "classification": "code_fence_normalized",
+      "passed": true,
+      "strict_pass": false,
+      "normalized_pass": true
+    },
+    {
+      "fixture_id": "prose_rejected",
+      "expected_classification": "wrapper_rejected",
+      "classification": "wrapper_rejected",
+      "passed": true,
+      "strict_pass": null,
+      "normalized_pass": false
+    },
+    {
+      "fixture_id": "wrong_language",
+      "expected_classification": "wrapper_rejected",
+      "classification": "wrapper_rejected",
+      "passed": true,
+      "strict_pass": null,
+      "normalized_pass": false
+    },
+    {
+      "fixture_id": "noncanonical_variant",
+      "expected_classification": "python_noncanonical",
+      "classification": "python_noncanonical",
+      "passed": true,
+      "strict_pass": false,
+      "normalized_pass": false
+    },
+    {
+      "fixture_id": "noncanonical_bug",
+      "expected_classification": "python_noncanonical",
+      "classification": "python_noncanonical",
+      "passed": true,
+      "strict_pass": false,
+      "normalized_pass": false
+    },
+    {
+      "fixture_id": "syntax_error",
+      "expected_classification": "invalid_syntax",
+      "classification": "invalid_syntax",
+      "passed": true,
+      "strict_pass": false,
+      "normalized_pass": false
+    },
+    {
+      "fixture_id": "json_exact",
+      "expected_classification": "exact_match",
+      "classification": "exact_match",
+      "passed": true,
+      "strict_pass": true,
+      "normalized_pass": true
+    },
+    {
+      "fixture_id": "json_fenced",
+      "expected_classification": "code_fence_normalized",
+      "classification": "code_fence_normalized",
+      "passed": true,
+      "strict_pass": false,
+      "normalized_pass": true
+    },
+    {
+      "fixture_id": "json_type_difference",
+      "expected_classification": "json_value_mismatch",
+      "classification": "json_value_mismatch",
+      "passed": true,
+      "strict_pass": false,
+      "normalized_pass": false
+    },
+    {
+      "fixture_id": "json_float_difference",
+      "expected_classification": "json_value_mismatch",
+      "classification": "json_value_mismatch",
+      "passed": true,
+      "strict_pass": false,
+      "normalized_pass": false
+    },
+    {
+      "fixture_id": "json_invalid",
+      "expected_classification": "invalid_json",
+      "classification": "invalid_json",
+      "passed": true,
+      "strict_pass": false,
+      "normalized_pass": false
+    },
+    {
+      "fixture_id": "json_nonfinite",
+      "expected_classification": "invalid_json",
+      "classification": "invalid_json",
+      "passed": true,
+      "strict_pass": false,
+      "normalized_pass": false
+    },
+    {
+      "fixture_id": "empty",
+      "expected_classification": "empty_output",
+      "classification": "empty_output",
+      "passed": true,
+      "strict_pass": false,
+      "normalized_pass": false
+    },
+    {
+      "fixture_id": "nesting_limit",
+      "expected_classification": "resource_limit",
+      "classification": "resource_limit",
+      "passed": true,
+      "strict_pass": null,
+      "normalized_pass": false
+    },
+    {
+      "fixture_id": "number_limit",
+      "expected_classification": "resource_limit",
+      "classification": "resource_limit",
+      "passed": true,
+      "strict_pass": null,
+      "normalized_pass": false
+    },
+    {
+      "fixture_id": "token_limit",
+      "expected_classification": "resource_limit",
+      "classification": "resource_limit",
+      "passed": true,
+      "strict_pass": null,
+      "normalized_pass": false
+    },
+    {
+      "fixture_id": "ast_depth_limit",
+      "expected_classification": "resource_limit",
+      "classification": "resource_limit",
+      "passed": true,
+      "strict_pass": null,
+      "normalized_pass": false
+    }
+  ],
+  "r5_rescored": false,
+  "live_inference": false,
+  "generated_code_executed": false,
+  "reference_protocol_sha256": "c1533bd659b24e113a6d1e12b5801d018302b2f03f2efc0ad4efb8733588979f",
+  "source_sha256": {
+    "r6_diagnostic_grading.py": "f50e2a82e0a92a0b0f21ec2f936c74d15fa27a53ced2073fd90c4c89cd332267",
+    "r5_coding_quality.py": "d479f43ff7e9003333478c8003c41d5a7f62a3eed6fedbddc616668b46e84184",
+    "r4_foreground_reliability.py": "a452f56b5e7ba3f3b6a307656d10067e4289eb997ebeb0881b92b8ab54469f2b",
+    "nano_usb_client.py": "f50f30a645f3dcf842422b03de49725a9fedf45deb1ea9846820b68a169b92a1"
+  }
+}

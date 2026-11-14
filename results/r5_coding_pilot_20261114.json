@@ -1,0 +1,56 @@
+{
+  "schema": "nano-r5-coding-quality-v1",
+  "stage": "pilot",
+  "protocol_sha256": "dbf7a98282573286369eae9cc4176cbc253e96b1a7cbc013776598030a5a0eab",
+  "source_sha256": {
+    "r5_coding_quality.py": "d479f43ff7e9003333478c8003c41d5a7f62a3eed6fedbddc616668b46e84184",
+    "nano_usb_client.py": "f50f30a645f3dcf842422b03de49725a9fedf45deb1ea9846820b68a169b92a1",
+    "r4_foreground_reliability.py": "a452f56b5e7ba3f3b6a307656d10067e4289eb997ebeb0881b92b8ab54469f2b"
+  },
+  "started_utc": "2026-11-14T14:23:39.962347+00:00",
+  "finished_utc": "2026-11-14T14:24:06.087182+00:00",
+  "complete": false,
+  "stop": {
+    "code": "transport_timeout",
+    "phase": "initial_readiness",
+    "case_id": null,
+    "target": null
+  },
+  "samples": [],
+  "status_checks_passed": 0,
+  "generation_attempts": 0,
+  "observed_elapsed_s": 26.124213,
+  "hardware_placement_verified": false,
+  "model_parity_verified": false,
+  "runtime_build_attested": false,
+  "energy_measured": false,
+  "generated_code_executed": false,
+  "raw_response_saved": false,
+  "automatic_retries": false,
+  "protected_configuration_unchanged": true,
+  "registration_url": "https://github.com/Nanodagr8/nano-coreml-usb-bridge/issues/4#issuecomment-6878729872",
+  "registration_created_utc": "2026-11-14T14:23:25Z",
+  "source_report_sha256": "6aae609eed1fd50cecab4b6ae36d4f35ac1c634aa1089ffe819908531c3faa67",
+  "analysis": {
+    "complete": false,
+    "completed_requests": 0,
+    "by_target": {
+      "windows_cpu": {
+        "passed": 0,
+        "attempted_and_scored": 0,
+        "median_wall_s": null
+      },
+      "windows_gpu_candidate": {
+        "passed": 0,
+        "attempted_and_scored": 0,
+        "median_wall_s": null
+      },
+      "iphone_usb_coreml": {
+        "passed": 0,
+        "attempted_and_scored": 0,
+        "median_wall_s": null
+      }
+    },
+    "claim": "Descriptive fixed-suite qualification only; no productivity or hardware-speed ranking."
+  }
+}

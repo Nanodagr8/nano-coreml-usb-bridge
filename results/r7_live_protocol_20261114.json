@@ -1,0 +1,218 @@
+{
+  "budget_seconds": {
+    "pilot": 120,
+    "study": 360
+  },
+  "cases": [
+    "py_inclusive_range",
+    "py_bool_token_guard",
+    "py_owned_cancel",
+    "py_safe_lookup",
+    "py_cap_tokens",
+    "py_fresh_list",
+    "py_slice_trace",
+    "py_bool_trace",
+    "py_finally_trace",
+    "py_dedupe_trace",
+    "ts_filter_trace",
+    "swift_clamp_trace"
+  ],
+  "limits": "One observation per case and target, repeated pilot tasks, unmatched model implementations and load state. No semantic correctness, hardware placement, energy or productivity estimate.",
+  "max_output_tokens": 64,
+  "model_ids": {
+    "iphone": "qwen3.5-0.8b",
+    "windows": "qwen3.5:0.8b"
+  },
+  "pilot_gate": "Six completed responses and both readiness checks. Exclude pilot observations from study results. Pilot correctness is not a gate.",
+  "primary": "Counts by diagnostic classification for each target on the fixed suite.",
+  "privacy": "Grade transient answers in the isolated worker. Persist labels and numeric metadata only. Never execute candidate code.",
+  "reference_tasks_sha256": "c1533bd659b24e113a6d1e12b5801d018302b2f03f2efc0ad4efb8733588979f",
+  "schema": "nano-live-coding-diagnostic-plan-v1",
+  "secondary": "Strict true, false and unassessed counts, fence-normalized counts, token-cap hits and median generation wall time per target.",
+  "sequence": {
+    "pilot": [
+      [
+        "py_inclusive_range",
+        "windows_cpu"
+      ],
+      [
+        "py_inclusive_range",
+        "windows_gpu_candidate"
+      ],
+      [
+        "py_inclusive_range",
+        "iphone_usb_coreml"
+      ],
+      [
+        "py_bool_token_guard",
+        "windows_cpu"
+      ],
+      [
+        "py_bool_token_guard",
+        "iphone_usb_coreml"
+      ],
+      [
+        "py_bool_token_guard",
+        "windows_gpu_candidate"
+      ]
+    ],
+    "study": [
+      [
+        "py_inclusive_range",
+        "windows_cpu"
+      ],
+      [
+        "py_inclusive_range",
+        "windows_gpu_candidate"
+      ],
+      [
+        "py_inclusive_range",
+        "iphone_usb_coreml"
+      ],
+      [
+        "py_bool_token_guard",
+        "windows_cpu"
+      ],
+      [
+        "py_bool_token_guard",
+        "iphone_usb_coreml"
+      ],
+      [
+        "py_bool_token_guard",
+        "windows_gpu_candidate"
+      ],
+      [
+        "py_owned_cancel",
+        "windows_gpu_candidate"
+      ],
+      [
+        "py_owned_cancel",
+        "windows_cpu"
+      ],
+      [
+        "py_owned_cancel",
+        "iphone_usb_coreml"
+      ],
+      [
+        "py_safe_lookup",
+        "windows_gpu_candidate"
+      ],
+      [
+        "py_safe_lookup",
+        "iphone_usb_coreml"
+      ],
+      [
+        "py_safe_lookup",
+        "windows_cpu"
+      ],
+      [
+        "py_cap_tokens",
+        "iphone_usb_coreml"
+      ],
+      [
+        "py_cap_tokens",
+        "windows_cpu"
+      ],
+      [
+        "py_cap_tokens",
+        "windows_gpu_candidate"
+      ],
+      [
+        "py_fresh_list",
+        "iphone_usb_coreml"
+      ],
+      [
+        "py_fresh_list",
+        "windows_gpu_candidate"
+      ],
+      [
+        "py_fresh_list",
+        "windows_cpu"
+      ],
+      [
+        "py_slice_trace",
+        "windows_cpu"
+      ],
+      [
+        "py_slice_trace",
+        "windows_gpu_candidate"
+      ],
+      [
+        "py_slice_trace",
+        "iphone_usb_coreml"
+      ],
+      [
+        "py_bool_trace",
+        "windows_cpu"
+      ],
+      [
+        "py_bool_trace",
+        "iphone_usb_coreml"
+      ],
+      [
+        "py_bool_trace",
+        "windows_gpu_candidate"
+      ],
+      [
+        "py_finally_trace",
+        "windows_gpu_candidate"
+      ],
+      [
+        "py_finally_trace",
+        "windows_cpu"
+      ],
+      [
+        "py_finally_trace",
+        "iphone_usb_coreml"
+      ],
+      [
+        "py_dedupe_trace",
+        "windows_gpu_candidate"
+      ],
+      [
+        "py_dedupe_trace",
+        "iphone_usb_coreml"
+      ],
+      [
+        "py_dedupe_trace",
+        "windows_cpu"
+      ],
+      [
+        "ts_filter_trace",
+        "iphone_usb_coreml"
+      ],
+      [
+        "ts_filter_trace",
+        "windows_cpu"
+      ],
+      [
+        "ts_filter_trace",
+        "windows_gpu_candidate"
+      ],
+      [
+        "swift_clamp_trace",
+        "iphone_usb_coreml"
+      ],
+      [
+        "swift_clamp_trace",
+        "windows_gpu_candidate"
+      ],
+      [
+        "swift_clamp_trace",
+        "windows_cpu"
+      ]
+    ]
+  },
+  "source_sha256": {
+    "nano_usb_client.py": "f50f30a645f3dcf842422b03de49725a9fedf45deb1ea9846820b68a169b92a1",
+    "r4_foreground_reliability.py": "a452f56b5e7ba3f3b6a307656d10067e4289eb997ebeb0881b92b8ab54469f2b",
+    "r5_coding_quality.py": "d479f43ff7e9003333478c8003c41d5a7f62a3eed6fedbddc616668b46e84184",
+    "r6_diagnostic_grading.py": "f50e2a82e0a92a0b0f21ec2f936c74d15fa27a53ced2073fd90c4c89cd332267",
+    "r7_live_diagnostics.py": "4348990d7547e6f3a7490fcf7c2154e392fbda05a894d2ba572b035a8beb1916"
+  },
+  "stopping": "Stop at the first service, metrics, grader infrastructure or budget failure. Keep the prefix. No automatic retries or unrecorded generation warmups.",
+  "unassessed_strict": [
+    "resource_limit",
+    "wrapper_rejected"
+  ]
+}

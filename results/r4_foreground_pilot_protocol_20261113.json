@@ -1,0 +1,29 @@
+{
+  "schema": "nano-r4-sampled-continuity-plan-v1",
+  "stage": "pilot",
+  "created_utc": "2026-11-14T05:40:38.617725+00:00",
+  "runner_sha256": "a452f56b5e7ba3f3b6a307656d10067e4289eb997ebeb0881b92b8ab54469f2b",
+  "supporting_client_sha256": "f50f30a645f3dcf842422b03de49725a9fedf45deb1ea9846820b68a169b92a1",
+  "rounds": 1,
+  "idle_seconds": 0,
+  "budget_s": 60,
+  "tasks": [
+    "arithmetic",
+    "format"
+  ],
+  "max_tokens": 32,
+  "expected_generations": 2,
+  "expected_status_checks": 3,
+  "expected_idle_intervals": 1,
+  "target": "iphone_usb_coreml",
+  "automatic_retries": false,
+  "stop_on_first_failure": true,
+  "requirement": "operator keeps the existing app awake in foreground; no app deployment or source change",
+  "runtime_build_attested": false,
+  "wakelock_fix_certified": false,
+  "screen_state_instrumented": false,
+  "latency_benchmark": false,
+  "energy_measured": false,
+  "ane_profiled": false,
+  "interpretation": "Sampled ready/quality observations across idle intervals; not continuous uptime, unattended persistence or a reliability probability estimate."
+}

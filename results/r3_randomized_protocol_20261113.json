@@ -1,0 +1,77 @@
+{
+  "schema": "nano-r3-preregistered-random-round-order-v1",
+  "created_utc": "2026-11-13T13:46:47.536051+00:00",
+  "ai_targets": [
+    "windows_cpu",
+    "windows_gpu_candidate",
+    "iphone_usb_coreml"
+  ],
+  "targets": [
+    "baseline",
+    "windows_cpu",
+    "windows_gpu_candidate",
+    "iphone_usb_coreml"
+  ],
+  "public_order_seed": 3875528134,
+  "condition_orders": [
+    [
+      "windows_cpu",
+      "iphone_usb_coreml",
+      "windows_gpu_candidate"
+    ],
+    [
+      "iphone_usb_coreml",
+      "windows_gpu_candidate",
+      "windows_cpu"
+    ],
+    [
+      "windows_gpu_candidate",
+      "windows_cpu",
+      "iphone_usb_coreml"
+    ],
+    [
+      "windows_cpu",
+      "windows_gpu_candidate",
+      "iphone_usb_coreml"
+    ],
+    [
+      "windows_gpu_candidate",
+      "iphone_usb_coreml",
+      "windows_cpu"
+    ],
+    [
+      "iphone_usb_coreml",
+      "windows_cpu",
+      "windows_gpu_candidate"
+    ]
+  ],
+  "rounds": 6,
+  "windows": 25,
+  "worker_seconds": 5,
+  "workers": 4,
+  "requests_per_ai_window": 4,
+  "task_sequence": [
+    "arithmetic",
+    "format",
+    "arithmetic",
+    "format"
+  ],
+  "warmups_per_ai_window": 2,
+  "primary_metric": "per_round_host_rate_ratio_iphone_vs_windows_cpu",
+  "secondary_metrics": [
+    "bracket_normalized_host_rate",
+    "per_task_request_wall_time",
+    "exact_quality"
+  ],
+  "stop_on_quality_failure": true,
+  "stop_on_overlap_or_placement_failure": true,
+  "pool_with_prior_data": false,
+  "exclude_outliers": false,
+  "repeat_failed_runs_automatically": false,
+  "python_version": "3.14.0",
+  "sources": [
+    "https://www.itl.nist.gov/div898/handbook/pri/section3/pri332.htm",
+    "https://github.com/mlcommons/inference_policies/blob/master/inference_rules.adoc"
+  ],
+  "not_mlperf_compliant_claim": true
+}

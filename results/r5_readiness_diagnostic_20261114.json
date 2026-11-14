@@ -1,0 +1,11 @@
+{
+  "windows": {
+    "ready": false,
+    "code": "transport_timeout",
+    "elapsed_s": 25.196
+  },
+  "iphone": {
+    "ready": true,
+    "elapsed_s": 0.513
+  }
+}

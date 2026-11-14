@@ -1,0 +1,94 @@
+{
+  "schema": "nano-r3-registered-swift-validation-plan-v1",
+  "created_utc": "2026-11-14T02:21:41.064876+00:00",
+  "source_commit": "8e2087e4ff838970e2346e6520be87af8b9aed7c",
+  "source_count": 10,
+  "job_manifest_sha256": "149c47b3815796b76cac80b2a8618c4dd342aa39f3289fb73d76339ad28d7aa5",
+  "job": "swift_typecheck_existing_toolchain_windows_wsl",
+  "public_order_seed": 3262589192,
+  "condition_orders": [
+    [
+      "windows_gpu_candidate",
+      "windows_cpu",
+      "iphone_usb_coreml"
+    ],
+    [
+      "iphone_usb_coreml",
+      "windows_gpu_candidate",
+      "windows_cpu"
+    ],
+    [
+      "iphone_usb_coreml",
+      "windows_cpu",
+      "windows_gpu_candidate"
+    ],
+    [
+      "windows_cpu",
+      "windows_gpu_candidate",
+      "iphone_usb_coreml"
+    ],
+    [
+      "windows_cpu",
+      "iphone_usb_coreml",
+      "windows_gpu_candidate"
+    ],
+    [
+      "windows_gpu_candidate",
+      "iphone_usb_coreml",
+      "windows_cpu"
+    ]
+  ],
+  "sequence": [
+    "baseline",
+    "windows_gpu_candidate",
+    "windows_cpu",
+    "iphone_usb_coreml",
+    "baseline",
+    "iphone_usb_coreml",
+    "windows_gpu_candidate",
+    "windows_cpu",
+    "baseline",
+    "iphone_usb_coreml",
+    "windows_cpu",
+    "windows_gpu_candidate",
+    "baseline",
+    "windows_cpu",
+    "windows_gpu_candidate",
+    "iphone_usb_coreml",
+    "baseline",
+    "windows_cpu",
+    "iphone_usb_coreml",
+    "windows_gpu_candidate",
+    "baseline",
+    "windows_gpu_candidate",
+    "iphone_usb_coreml",
+    "windows_cpu",
+    "baseline"
+  ],
+  "measured_jobs": 25,
+  "compiler_warmup_jobs": 25,
+  "ai_tasks_per_ai_job": [
+    "arithmetic",
+    "format"
+  ],
+  "ai_warmups_per_ai_job": 2,
+  "primary_metric": "median_per_round_compiler_time_reduction_iphone_vs_cpu_percent",
+  "primary_formula": "100*(cpu_seconds-iphone_seconds)/cpu_seconds",
+  "secondary_metrics": [
+    "compiler_time_vs_bracket_baseline",
+    "ai_latency_by_task",
+    "correctness",
+    "overlap"
+  ],
+  "overall_deadline_s": 600,
+  "compiler_deadline_s": 45,
+  "conservative_overlap_margin_s": 0.25,
+  "pool_pilot_data": false,
+  "exclude_outliers": false,
+  "automatic_failed_full_run_retries": false,
+  "pilot_notice": "one job per AI backend; 10.33% baseline drift; apparent 11.18% difference is inconclusive",
+  "phone_install": false,
+  "signing": false,
+  "energy_measured": false,
+  "ane_profiled": false
+}

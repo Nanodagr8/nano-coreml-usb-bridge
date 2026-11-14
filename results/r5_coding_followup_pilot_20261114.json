@@ -1,0 +1,118 @@
+{
+  "schema": "nano-r5-coding-quality-v1",
+  "stage": "pilot",
+  "protocol_sha256": "dbf7a98282573286369eae9cc4176cbc253e96b1a7cbc013776598030a5a0eab",
+  "source_sha256": {
+    "r5_coding_quality.py": "d479f43ff7e9003333478c8003c41d5a7f62a3eed6fedbddc616668b46e84184",
+    "nano_usb_client.py": "f50f30a645f3dcf842422b03de49725a9fedf45deb1ea9846820b68a169b92a1",
+    "r4_foreground_reliability.py": "a452f56b5e7ba3f3b6a307656d10067e4289eb997ebeb0881b92b8ab54469f2b"
+  },
+  "started_utc": "2026-11-14T14:44:20.969449+00:00",
+  "finished_utc": "2026-11-14T14:44:44.414825+00:00",
+  "complete": true,
+  "stop": null,
+  "samples": [
+    {
+      "case_id": "py_inclusive_range",
+      "target": "windows_cpu",
+      "model_id": "qwen3.5:0.8b",
+      "passed_rubric": true,
+      "response_sha256": "79e9579e4089c53357e0c6534772f29bd373fb1ca260ead10d9e7cfda40be868",
+      "completion_tokens": 9,
+      "wall_s": 5.023246,
+      "model_elapsed_s": 0.28769,
+      "metrics_source": "ollama_reported"
+    },
+    {
+      "case_id": "py_inclusive_range",
+      "target": "windows_gpu_candidate",
+      "model_id": "qwen3.5:0.8b",
+      "passed_rubric": true,
+      "response_sha256": "79e9579e4089c53357e0c6534772f29bd373fb1ca260ead10d9e7cfda40be868",
+      "completion_tokens": 9,
+      "wall_s": 4.420238,
+      "model_elapsed_s": 0.194875,
+      "metrics_source": "ollama_reported"
+    },
+    {
+      "case_id": "py_inclusive_range",
+      "target": "iphone_usb_coreml",
+      "model_id": "qwen3.5-0.8b",
+      "passed_rubric": false,
+      "response_sha256": "bba374b3839f5e2f445bcd7219555bd4df6d2d908e193707e9e83c9d21d41e68",
+      "completion_tokens": 53,
+      "wall_s": 3.062189,
+      "model_elapsed_s": 3.040446,
+      "metrics_source": "on_device_coreml_generator"
+    },
+    {
+      "case_id": "py_bool_token_guard",
+      "target": "windows_cpu",
+      "model_id": "qwen3.5:0.8b",
+      "passed_rubric": true,
+      "response_sha256": "5bb1a960083403a121a80f84040dba28232bba2b9ac4299048a9aad33096621b",
+      "completion_tokens": 15,
+      "wall_s": 3.969871,
+      "model_elapsed_s": 0.582588,
+      "metrics_source": "ollama_reported"
+    },
+    {
+      "case_id": "py_bool_token_guard",
+      "target": "iphone_usb_coreml",
+      "model_id": "qwen3.5-0.8b",
+      "passed_rubric": true,
+      "response_sha256": "5bb1a960083403a121a80f84040dba28232bba2b9ac4299048a9aad33096621b",
+      "completion_tokens": 14,
+      "wall_s": 1.700074,
+      "model_elapsed_s": 1.678293,
+      "metrics_source": "on_device_coreml_generator"
+    },
+    {
+      "case_id": "py_bool_token_guard",
+      "target": "windows_gpu_candidate",
+      "model_id": "qwen3.5:0.8b",
+      "passed_rubric": false,
+      "response_sha256": "756d863bf0bccd025596fdcf7ced6fc7b257b39e97abfde79e9ffdef77e3b2e9",
+      "completion_tokens": 15,
+      "wall_s": 4.926759,
+      "model_elapsed_s": 0.398129,
+      "metrics_source": "ollama_reported"
+    }
+  ],
+  "status_checks_passed": 2,
+  "generation_attempts": 6,
+  "observed_elapsed_s": 23.444872,
+  "hardware_placement_verified": false,
+  "model_parity_verified": false,
+  "runtime_build_attested": false,
+  "energy_measured": false,
+  "generated_code_executed": false,
+  "raw_response_saved": false,
+  "automatic_retries": false,
+  "protected_configuration_unchanged": true,
+  "registration_url": "https://github.com/Nanodagr8/nano-coreml-usb-bridge/issues/4#issuecomment-6879060537",
+  "registration_created_utc": "2026-11-14T14:44:13Z",
+  "source_report_sha256": "16a888c7ef071968c3397da3d9cf6fde99d7642a0f4dc419d1e8508b680c6d5a",
+  "analysis": {
+    "complete": true,
+    "completed_requests": 6,
+    "by_target": {
+      "windows_cpu": {
+        "passed": 2,
+        "attempted_and_scored": 2,
+        "median_wall_s": 4.4965585
+      },
+      "windows_gpu_candidate": {
+        "passed": 1,
+        "attempted_and_scored": 2,
+        "median_wall_s": 4.6734985
+      },
+      "iphone_usb_coreml": {
+        "passed": 1,
+        "attempted_and_scored": 2,
+        "median_wall_s": 2.3811315
+      }
+    },
+    "claim": "Descriptive fixed-suite qualification only; no productivity or hardware-speed ranking."
+  }
+}

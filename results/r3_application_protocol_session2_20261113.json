@@ -1,0 +1,108 @@
+{
+  "schema": "nano-r3-swift-session2-plan-v1",
+  "created_utc": "2026-11-14T02:46:48.288250+00:00",
+  "source_commit": "8e2087e4ff838970e2346e6520be87af8b9aed7c",
+  "source_count": 10,
+  "job_manifest_sha256": "d106672ffd76f26b91698190342a2f29eac41f834039a569c0beac61be5c9040",
+  "job": "swift_typecheck_existing_toolchain_windows_wsl",
+  "public_order_seed": 2582596943,
+  "condition_orders": [
+    [
+      "iphone_usb_coreml",
+      "windows_gpu_candidate",
+      "windows_cpu"
+    ],
+    [
+      "windows_gpu_candidate",
+      "windows_cpu",
+      "iphone_usb_coreml"
+    ],
+    [
+      "windows_cpu",
+      "iphone_usb_coreml",
+      "windows_gpu_candidate"
+    ],
+    [
+      "windows_cpu",
+      "windows_gpu_candidate",
+      "iphone_usb_coreml"
+    ],
+    [
+      "windows_gpu_candidate",
+      "iphone_usb_coreml",
+      "windows_cpu"
+    ],
+    [
+      "iphone_usb_coreml",
+      "windows_cpu",
+      "windows_gpu_candidate"
+    ]
+  ],
+  "sequence": [
+    "baseline",
+    "iphone_usb_coreml",
+    "windows_gpu_candidate",
+    "windows_cpu",
+    "baseline",
+    "windows_gpu_candidate",
+    "windows_cpu",
+    "iphone_usb_coreml",
+    "baseline",
+    "windows_cpu",
+    "iphone_usb_coreml",
+    "windows_gpu_candidate",
+    "baseline",
+    "windows_cpu",
+    "windows_gpu_candidate",
+    "iphone_usb_coreml",
+    "baseline",
+    "windows_gpu_candidate",
+    "iphone_usb_coreml",
+    "windows_cpu",
+    "baseline",
+    "iphone_usb_coreml",
+    "windows_cpu",
+    "windows_gpu_candidate",
+    "baseline"
+  ],
+  "measured_jobs": 25,
+  "compiler_warmup_jobs": 25,
+  "ai_tasks_per_ai_job": [
+    "arithmetic",
+    "format"
+  ],
+  "ai_warmups_per_ai_job": 2,
+  "primary_metric": "median_per_round_compiler_time_reduction_iphone_vs_cpu_percent",
+  "primary_formula": "100*(cpu_seconds-iphone_seconds)/cpu_seconds",
+  "secondary_metrics": [
+    "compiler_time_vs_bracket_baseline",
+    "ai_latency_by_task",
+    "correctness",
+    "overlap"
+  ],
+  "overall_deadline_s": 600,
+  "compiler_deadline_s": 45,
+  "conservative_overlap_margin_s": 0.25,
+  "pool_pilot_data": false,
+  "exclude_outliers": false,
+  "automatic_failed_full_run_retries": false,
+  "pilot_notice": "one job per AI backend; 10.33% baseline drift; apparent 11.18% difference is inconclusive",
+  "phone_install": false,
+  "signing": false,
+  "energy_measured": false,
+  "ane_profiled": false,
+  "session_id": "session2",
+  "prior_session_pooled": false,
+  "unmeasured_cache_calibration_jobs": 5,
+  "analysis_notice": "Paired round bootstrap intervals are descriptive and conditional on within-session exchangeability; no cross-system inference.",
+  "logical_spec_sha256": "bfdae05c7d27e2e9f38d4fef5ffef229483b7d2578ffd1a01a1dc5563aea6b57",
+  "uncertainty_method": {
+    "method": "paired_round_percentile_bootstrap",
+    "resamples": 10000,
+    "seed": 20261113,
+    "coverage": 0.95,
+    "scope": "conditional within-session exchangeability; not cross-system or between-session confidence"
+  },
+  "separate_session_reporting": true,
+  "independent_external_review_claim": false
+}
