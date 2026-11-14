@@ -87,3 +87,7 @@ Please contribute reproducibility reports, security reviews, and measured CPU/GP
 ## R5 coding-task qualification
 
 The registered [coding-task qualification](docs/R5_CODING_QUALIFICATION_20261114.md) completed all 36 fixed-suite requests after authorized recovery of the existing Windows API. Per-case scores, the separate pilot and stopped attempt are retained. These constrained tasks do not establish general coding quality, hardware speed or productivity advantage.
+
+## R6 diagnostic grading
+
+The [offline diagnostic component](docs/R6_DIAGNOSTIC_GRADING_20261114.md) distinguishes bounded exact matches, single-fence normalization, malformed output and noncanonical expressions. It passed 20 synthetic classification fixtures and preserves R5 results. No generated code is executed and semantic correctness remains unassessed.
