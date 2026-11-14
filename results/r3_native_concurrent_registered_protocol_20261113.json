@@ -1,0 +1,111 @@
+{
+  "schema": "nano-native-concurrent-protocol-v1",
+  "stage": "registered",
+  "created_utc": "2026-11-14T04:05:18.586594+00:00",
+  "public_order_seed": 848640169,
+  "condition_orders": [
+    [
+      "iphone_usb_coreml",
+      "windows_gpu_candidate",
+      "windows_cpu"
+    ],
+    [
+      "windows_cpu",
+      "windows_gpu_candidate",
+      "iphone_usb_coreml"
+    ],
+    [
+      "windows_gpu_candidate",
+      "windows_cpu",
+      "iphone_usb_coreml"
+    ],
+    [
+      "windows_gpu_candidate",
+      "iphone_usb_coreml",
+      "windows_cpu"
+    ],
+    [
+      "windows_cpu",
+      "iphone_usb_coreml",
+      "windows_gpu_candidate"
+    ],
+    [
+      "iphone_usb_coreml",
+      "windows_cpu",
+      "windows_gpu_candidate"
+    ]
+  ],
+  "sequence": [
+    "baseline",
+    "iphone_usb_coreml",
+    "windows_gpu_candidate",
+    "windows_cpu",
+    "baseline",
+    "windows_cpu",
+    "windows_gpu_candidate",
+    "iphone_usb_coreml",
+    "baseline",
+    "windows_gpu_candidate",
+    "windows_cpu",
+    "iphone_usb_coreml",
+    "baseline",
+    "windows_gpu_candidate",
+    "iphone_usb_coreml",
+    "windows_cpu",
+    "baseline",
+    "windows_cpu",
+    "iphone_usb_coreml",
+    "windows_gpu_candidate",
+    "baseline",
+    "iphone_usb_coreml",
+    "windows_cpu",
+    "windows_gpu_candidate",
+    "baseline"
+  ],
+  "tasks": [
+    "arithmetic",
+    "format"
+  ],
+  "job_manifest_sha256": "c3cfbce2903d241585e58b2a70eb927640767323c0fad383e8db41e1d9e64ba5",
+  "native_spec_sha256": "605557f6ca87f9316781b0bb28c3eb444be269847e7273bcb2f42c496e31f239",
+  "logical_spec_sha256": "bfdae05c7d27e2e9f38d4fef5ffef229483b7d2578ffd1a01a1dc5563aea6b57",
+  "worker_sha256": "bdc37b07048d9c43174c4afee35b43e84abd5ac238b855f2e3c2f638a046795a",
+  "controller_sha256": "045a4ca3b6e09019e44a5713ce692c0934f3ae186ba314674660289448f96ee1",
+  "native_job_deadline_s": 45,
+  "overall_deadline_s": 1200,
+  "compiler_warmup_before_every_measured_job": true,
+  "measured_jobs": 25,
+  "compiler_warmups": 25,
+  "measured_ai_requests": 36,
+  "ai_warmups": 36,
+  "max_output_tokens": 32,
+  "conservative_overlap_margin_s": 0.25,
+  "primary_metric": "median_paired_native_build_time_reduction_iphone_vs_cpu_percent",
+  "primary_formula": "100*(cpu_seconds-iphone_seconds)/cpu_seconds",
+  "secondary_metrics": [
+    "native_build_time_vs_bracket_baseline",
+    "ai_request_latency",
+    "exact_answer_quality",
+    "placement",
+    "artifact_integrity",
+    "overlap"
+  ],
+  "uncertainty_method": {
+    "method": "paired_round_percentile_bootstrap",
+    "resamples": 10000,
+    "seed": 20261113,
+    "coverage": 0.95,
+    "scope": "conditional within-session exchangeability; excludes serial/carryover and between-session/system uncertainty"
+  },
+  "pilot_baseline_spread_percent": 6.782165958382871,
+  "pilot_data_pooled": false,
+  "calibration_data_pooled": false,
+  "exclude_outliers": false,
+  "automatic_failed_run_retries": false,
+  "phone_install": false,
+  "signing": false,
+  "energy_measured": false,
+  "ane_profiled": false,
+  "cache_policy": "same isolated warm workspace; force all ten app objects and link each job; preserve compiler bookkeeping and module cache; guard 402 dependency object/module inputs",
+  "sample_size_notice": "six paired native-build rounds in one registered session; no general or independent replication claim"
+}

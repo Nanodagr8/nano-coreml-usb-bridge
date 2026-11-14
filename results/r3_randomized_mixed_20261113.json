@@ -1,0 +1,235 @@
+{
+  "schema": "nano-r3-randomized-mixed-published-v1",
+  "date": "2026-11-13",
+  "task": "mixed_arithmetic_format",
+  "model_family": "qwen3.5-0.8b",
+  "windows_model_digest": "de63045f29755d4721c09d54c9b45c2dadb644f4fd7d604d4cac90d96049971c",
+  "source_report_sha256": "58116994570a28873eb83a9c281cb58e891eddea601661a085ad42f0cd05b474",
+  "measured_runner_sha256": "2a9a18a56ade28046ee737fc01bfd9dc436556efdd9e514a09308e99b49877e9",
+  "measured_r3_source_sha256": "b73c72f3f416a7491d8d094561eb69c958b6c5a18f265ebc9f01b5d583c2e260",
+  "public_runner_adapted": true,
+  "adaptations": [
+    "portable_imports",
+    "portable_repository_path",
+    "module_description",
+    "portable_protocol_path"
+  ],
+  "synchronized_workers": true,
+  "all_six_permutations": true,
+  "randomized": true,
+  "energy_measured": false,
+  "ane_execution_verified": false,
+  "quantization_equivalence_verified": false,
+  "hardware_utilization_profiled": false,
+  "general_offloading_advantage_proved": false,
+  "summary": [
+    {
+      "target": "baseline",
+      "windows": 7,
+      "requests": 0,
+      "median_host_mib_s": 6262.467,
+      "median_request_s": null,
+      "median_burst_s": null,
+      "median_bracket_change_percent": null
+    },
+    {
+      "target": "windows_cpu",
+      "windows": 6,
+      "requests": 24,
+      "median_host_mib_s": 5682.665,
+      "median_request_s": 0.30502,
+      "median_burst_s": 1.12538,
+      "median_bracket_change_percent": -8.51
+    },
+    {
+      "target": "windows_gpu_candidate",
+      "windows": 6,
+      "requests": 24,
+      "median_host_mib_s": 5906.692,
+      "median_request_s": 0.37611,
+      "median_burst_s": 1.46145,
+      "median_bracket_change_percent": -5.2
+    },
+    {
+      "target": "iphone_usb_coreml",
+      "windows": 6,
+      "requests": 24,
+      "median_host_mib_s": 6264.038,
+      "median_request_s": 0.71023,
+      "median_burst_s": 2.8937,
+      "median_bracket_change_percent": 0.41
+    }
+  ],
+  "bracket_changes_percent": {
+    "windows_cpu": [
+      -9.0433,
+      -8.6928,
+      -12.1325,
+      -8.0826,
+      -8.2079,
+      -8.3297
+    ],
+    "windows_gpu_candidate": [
+      -4.7458,
+      -5.7762,
+      -5.4837,
+      -3.8676,
+      -4.9137,
+      -6.1184
+    ],
+    "iphone_usb_coreml": [
+      -1.4807,
+      0.1799,
+      -0.2154,
+      1.697,
+      0.7604,
+      0.6308
+    ]
+  },
+  "phone_vs_cpu_percent": [
+    8.3145,
+    9.7174,
+    13.5626,
+    10.6396,
+    9.7702,
+    9.7747
+  ],
+  "task_summary": [
+    {
+      "target": "windows_cpu",
+      "task_label": "arithmetic",
+      "requests": 12,
+      "correct": 12,
+      "median_request_s": 0.32554,
+      "observed_completion_tokens": [
+        3
+      ]
+    },
+    {
+      "target": "windows_cpu",
+      "task_label": "format",
+      "requests": 12,
+      "correct": 12,
+      "median_request_s": 0.24707,
+      "observed_completion_tokens": [
+        2
+      ]
+    },
+    {
+      "target": "windows_gpu_candidate",
+      "task_label": "arithmetic",
+      "requests": 12,
+      "correct": 12,
+      "median_request_s": 0.41872,
+      "observed_completion_tokens": [
+        3
+      ]
+    },
+    {
+      "target": "windows_gpu_candidate",
+      "task_label": "format",
+      "requests": 12,
+      "correct": 12,
+      "median_request_s": 0.31742,
+      "observed_completion_tokens": [
+        2
+      ]
+    },
+    {
+      "target": "iphone_usb_coreml",
+      "task_label": "arithmetic",
+      "requests": 12,
+      "correct": 12,
+      "median_request_s": 0.82872,
+      "observed_completion_tokens": [
+        2
+      ]
+    },
+    {
+      "target": "iphone_usb_coreml",
+      "task_label": "format",
+      "requests": 12,
+      "correct": 12,
+      "median_request_s": 0.61888,
+      "observed_completion_tokens": [
+        1
+      ]
+    }
+  ],
+  "protocol_sha256": "2212fcadb78d8e2631026ff40bd75a1354fb95d30f75b9054fa7192398b19b3a",
+  "public_order_seed": 3875528134,
+  "registration_url": "https://github.com/Nanodagr8/nano-coreml-usb-bridge/issues/4#issuecomment-6854803471",
+  "registration_created_utc": "2026-11-13T13:48:15Z",
+  "run_started_utc": "2026-11-13T13:48:36.5330338Z",
+  "run_completed_utc": "2026-11-13T13:51:45.030469+00:00",
+  "primary_metric": "per_round_host_rate_ratio_iphone_vs_windows_cpu",
+  "primary_median_phone_cpu_percent": 9.77,
+  "pooled_with_prior_data": false,
+  "outliers_excluded": false,
+  "full_run_attempts": 1,
+  "warmups": [
+    {"target":"windows_cpu","task_label":"arithmetic","window_sequence":1,"wall_s":3.00087,"completion_tokens":3,"model_elapsed_ms":483.444,"passed_exact_answer":true},
+    {"target":"windows_cpu","task_label":"format","window_sequence":1,"wall_s":0.4232,"completion_tokens":2,"model_elapsed_ms":347.24,"passed_exact_answer":true},
+    {"target":"iphone_usb_coreml","task_label":"arithmetic","window_sequence":2,"wall_s":1.37274,"completion_tokens":2,"model_elapsed_ms":1352.972,"passed_exact_answer":true},
+    {"target":"iphone_usb_coreml","task_label":"format","window_sequence":2,"wall_s":0.6278,"completion_tokens":1,"model_elapsed_ms":614.654,"passed_exact_answer":true},
+    {"target":"windows_gpu_candidate","task_label":"arithmetic","window_sequence":3,"wall_s":3.7728,"completion_tokens":3,"model_elapsed_ms":329.693,"passed_exact_answer":true},
+    {"target":"windows_gpu_candidate","task_label":"format","window_sequence":3,"wall_s":0.2782,"completion_tokens":2,"model_elapsed_ms":227.081,"passed_exact_answer":true},
+    {"target":"iphone_usb_coreml","task_label":"arithmetic","window_sequence":5,"wall_s":0.9426,"completion_tokens":2,"model_elapsed_ms":914.882,"passed_exact_answer":true},
+    {"target":"iphone_usb_coreml","task_label":"format","window_sequence":5,"wall_s":0.62526,"completion_tokens":1,"model_elapsed_ms":606.009,"passed_exact_answer":true},
+    {"target":"windows_gpu_candidate","task_label":"arithmetic","window_sequence":6,"wall_s":0.27641,"completion_tokens":3,"model_elapsed_ms":222.661,"passed_exact_answer":true},
+    {"target":"windows_gpu_candidate","task_label":"format","window_sequence":6,"wall_s":0.21636,"completion_tokens":2,"model_elapsed_ms":163.489,"passed_exact_answer":true},
+    {"target":"windows_cpu","task_label":"arithmetic","window_sequence":7,"wall_s":2.82991,"completion_tokens":3,"model_elapsed_ms":528.006,"passed_exact_answer":true},
+    {"target":"windows_cpu","task_label":"format","window_sequence":7,"wall_s":0.45298,"completion_tokens":2,"model_elapsed_ms":370.11,"passed_exact_answer":true},
+    {"target":"windows_gpu_candidate","task_label":"arithmetic","window_sequence":9,"wall_s":3.84125,"completion_tokens":3,"model_elapsed_ms":350.009,"passed_exact_answer":true},
+    {"target":"windows_gpu_candidate","task_label":"format","window_sequence":9,"wall_s":0.26507,"completion_tokens":2,"model_elapsed_ms":213.904,"passed_exact_answer":true},
+    {"target":"windows_cpu","task_label":"arithmetic","window_sequence":10,"wall_s":3.47876,"completion_tokens":3,"model_elapsed_ms":476.161,"passed_exact_answer":true},
+    {"target":"windows_cpu","task_label":"format","window_sequence":10,"wall_s":0.40281,"completion_tokens":2,"model_elapsed_ms":317.027,"passed_exact_answer":true},
+    {"target":"iphone_usb_coreml","task_label":"arithmetic","window_sequence":11,"wall_s":0.94308,"completion_tokens":2,"model_elapsed_ms":923.862,"passed_exact_answer":true},
+    {"target":"iphone_usb_coreml","task_label":"format","window_sequence":11,"wall_s":0.62654,"completion_tokens":1,"model_elapsed_ms":606.27,"passed_exact_answer":true},
+    {"target":"windows_cpu","task_label":"arithmetic","window_sequence":13,"wall_s":0.28546,"completion_tokens":3,"model_elapsed_ms":236.898,"passed_exact_answer":true},
+    {"target":"windows_cpu","task_label":"format","window_sequence":13,"wall_s":0.23532,"completion_tokens":2,"model_elapsed_ms":162.988,"passed_exact_answer":true},
+    {"target":"windows_gpu_candidate","task_label":"arithmetic","window_sequence":14,"wall_s":3.74892,"completion_tokens":3,"model_elapsed_ms":343.01,"passed_exact_answer":true},
+    {"target":"windows_gpu_candidate","task_label":"format","window_sequence":14,"wall_s":0.30831,"completion_tokens":2,"model_elapsed_ms":247.607,"passed_exact_answer":true},
+    {"target":"iphone_usb_coreml","task_label":"arithmetic","window_sequence":15,"wall_s":0.93482,"completion_tokens":2,"model_elapsed_ms":914.965,"passed_exact_answer":true},
+    {"target":"iphone_usb_coreml","task_label":"format","window_sequence":15,"wall_s":0.63663,"completion_tokens":1,"model_elapsed_ms":607.617,"passed_exact_answer":true},
+    {"target":"windows_gpu_candidate","task_label":"arithmetic","window_sequence":17,"wall_s":0.27779,"completion_tokens":3,"model_elapsed_ms":223.142,"passed_exact_answer":true},
+    {"target":"windows_gpu_candidate","task_label":"format","window_sequence":17,"wall_s":0.24061,"completion_tokens":2,"model_elapsed_ms":171.982,"passed_exact_answer":true},
+    {"target":"iphone_usb_coreml","task_label":"arithmetic","window_sequence":18,"wall_s":0.91084,"completion_tokens":2,"model_elapsed_ms":891.798,"passed_exact_answer":true},
+    {"target":"iphone_usb_coreml","task_label":"format","window_sequence":18,"wall_s":0.63634,"completion_tokens":1,"model_elapsed_ms":607.362,"passed_exact_answer":true},
+    {"target":"windows_cpu","task_label":"arithmetic","window_sequence":19,"wall_s":3.0123,"completion_tokens":3,"model_elapsed_ms":465.63,"passed_exact_answer":true},
+    {"target":"windows_cpu","task_label":"format","window_sequence":19,"wall_s":0.4063,"completion_tokens":2,"model_elapsed_ms":326.156,"passed_exact_answer":true},
+    {"target":"iphone_usb_coreml","task_label":"arithmetic","window_sequence":21,"wall_s":0.94124,"completion_tokens":2,"model_elapsed_ms":909.54,"passed_exact_answer":true},
+    {"target":"iphone_usb_coreml","task_label":"format","window_sequence":21,"wall_s":0.62346,"completion_tokens":1,"model_elapsed_ms":605.809,"passed_exact_answer":true},
+    {"target":"windows_cpu","task_label":"arithmetic","window_sequence":22,"wall_s":0.27764,"completion_tokens":3,"model_elapsed_ms":228.769,"passed_exact_answer":true},
+    {"target":"windows_cpu","task_label":"format","window_sequence":22,"wall_s":0.20813,"completion_tokens":2,"model_elapsed_ms":149.54,"passed_exact_answer":true},
+    {"target":"windows_gpu_candidate","task_label":"arithmetic","window_sequence":23,"wall_s":3.75086,"completion_tokens":3,"model_elapsed_ms":343.109,"passed_exact_answer":true},
+    {"target":"windows_gpu_candidate","task_label":"format","window_sequence":23,"wall_s":0.31891,"completion_tokens":2,"model_elapsed_ms":257.781,"passed_exact_answer":true}
+  ],
+  "observations": [
+    {"sequence":0,"target":"baseline","host_hash_mib_s":6098.018,"workers":4,"seconds":5,"requested_ai_count":0,"ai_requests":[],"stop_reason":null,"wall_s":5.67559,"placement_before":null,"placement_after":null,"worker_intervals":[{"start_offset_s":0.000131,"end_offset_s":5.000229},{"start_offset_s":9.8e-05,"end_offset_s":5.000157},{"start_offset_s":0.000113,"end_offset_s":5.000257},{"start_offset_s":9.6e-05,"end_offset_s":5.000229}],"worker_start_spread_s":3.5e-05,"all_ai_within_common_worker_interval":true},
+    {"sequence":1,"target":"windows_cpu","host_hash_mib_s":5632.433,"workers":4,"seconds":5,"requested_ai_count":4,"ai_requests":[{"task_label":"arithmetic","wall_s":0.30981,"completion_tokens":3,"model_elapsed_ms":252.82,"passed_exact_answer":true,"start_offset_s":0.30006,"finish_offset_s":0.6099},{"task_label":"format","wall_s":0.24121,"completion_tokens":2,"model_elapsed_ms":171.92,"passed_exact_answer":true,"start_offset_s":0.60991,"finish_offset_s":0.85115},{"task_label":"arithmetic","wall_s":0.32582,"completion_tokens":3,"model_elapsed_ms":257.202,"passed_exact_answer":true,"start_offset_s":0.85116,"finish_offset_s":1.177},{"task_label":"format","wall_s":0.24939,"completion_tokens":2,"model_elapsed_ms":173.232,"passed_exact_answer":true,"start_offset_s":1.177,"finish_offset_s":1.42642}],"stop_reason":null,"wall_s":5.71234,"placement_before":{"expected_condition":"windows_cpu","ollama_processor":"100% CPU","size_bytes":575741621,"size_vram_bytes":0,"digest_matches":true,"placement_check_passed":true},"placement_after":{"expected_condition":"windows_cpu","ollama_processor":"100% CPU","size_bytes":575741621,"size_vram_bytes":0,"digest_matches":true,"placement_check_passed":true},"worker_intervals":[{"start_offset_s":8.4e-05,"end_offset_s":5.000207},{"start_offset_s":8e-05,"end_offset_s":5.000156},{"start_offset_s":8.7e-05,"end_offset_s":5.000192},{"start_offset_s":8.7e-05,"end_offset_s":5.000198}],"worker_start_spread_s":7e-06,"all_ai_within_common_worker_interval":true},
+    {"sequence":2,"target":"iphone_usb_coreml","host_hash_mib_s":6100.744,"workers":4,"seconds":5,"requested_ai_count":4,"ai_requests":[{"task_label":"arithmetic","wall_s":0.87347,"completion_tokens":2,"model_elapsed_ms":847.66,"passed_exact_answer":true,"start_offset_s":0.30036,"finish_offset_s":1.17385},{"task_label":"format","wall_s":0.62207,"completion_tokens":1,"model_elapsed_ms":604.9,"passed_exact_answer":true,"start_offset_s":1.17386,"finish_offset_s":1.79595},{"task_label":"arithmetic","wall_s":0.79902,"completion_tokens":2,"model_elapsed_ms":768.6,"passed_exact_answer":true,"start_offset_s":1.79595,"finish_offset_s":2.595},{"task_label":"format","wall_s":0.61942,"completion_tokens":1,"model_elapsed_ms":604.415,"passed_exact_answer":true,"start_offset_s":2.595,"finish_offset_s":3.21444}],"stop_reason":null,"wall_s":5.6611,"placement_before":null,"placement_after":null,"worker_intervals":[{"start_offset_s":0.000433,"end_offset_s":5.000562},{"start_offset_s":0.000435,"end_offset_s":5.000535},{"start_offset_s":0.000431,"end_offset_s":5.000571},{"start_offset_s":0.000436,"end_offset_s":5.00058}],"worker_start_spread_s":5e-06,"all_ai_within_common_worker_interval":true},
+    {"sequence":3,"target":"windows_gpu_candidate","host_hash_mib_s":5898.552,"workers":4,"seconds":5,"requested_ai_count":4,"ai_requests":[{"task_label":"arithmetic","wall_s":0.42595,"completion_tokens":3,"model_elapsed_ms":365.882,"passed_exact_answer":true,"start_offset_s":0.3004,"finish_offset_s":0.72638},{"task_label":"format","wall_s":0.35286,"completion_tokens":2,"model_elapsed_ms":268.874,"passed_exact_answer":true,"start_offset_s":0.72638,"finish_offset_s":1.07926},{"task_label":"arithmetic","wall_s":0.41407,"completion_tokens":3,"model_elapsed_ms":333.214,"passed_exact_answer":true,"start_offset_s":1.07927,"finish_offset_s":1.49335},{"task_label":"format","wall_s":0.36321,"completion_tokens":2,"model_elapsed_ms":292.332,"passed_exact_answer":true,"start_offset_s":1.49336,"finish_offset_s":1.85659}],"stop_reason":null,"wall_s":5.67847,"placement_before":{"expected_condition":"windows_gpu_candidate","ollama_processor":"100% GPU","size_bytes":574745474,"size_vram_bytes":574745474,"digest_matches":true,"placement_check_passed":true},"placement_after":{"expected_condition":"windows_gpu_candidate","ollama_processor":"100% GPU","size_bytes":574745474,"size_vram_bytes":574745474,"digest_matches":true,"placement_check_passed":true},"worker_intervals":[{"start_offset_s":9.2e-05,"end_offset_s":5.000166},{"start_offset_s":9.5e-05,"end_offset_s":5.000169},{"start_offset_s":0.000123,"end_offset_s":5.000187},{"start_offset_s":9.2e-05,"end_offset_s":5.000212}],"worker_start_spread_s":3.2e-05,"all_ai_within_common_worker_interval":true},
+    {"sequence":4,"target":"baseline","host_hash_mib_s":6286.853,"workers":4,"seconds":5,"requested_ai_count":0,"ai_requests":[],"stop_reason":null,"wall_s":5.67279,"placement_before":null,"placement_after":null,"worker_intervals":[{"start_offset_s":9.7e-05,"end_offset_s":5.000127},{"start_offset_s":9.7e-05,"end_offset_s":5.000188},{"start_offset_s":9.7e-05,"end_offset_s":5.000163},{"start_offset_s":9.7e-05,"end_offset_s":5.000219}],"worker_start_spread_s":0.0,"all_ai_within_common_worker_interval":true},
+    {"sequence":5,"target":"iphone_usb_coreml","host_hash_mib_s":6288.723,"workers":4,"seconds":5,"requested_ai_count":4,"ai_requests":[{"task_label":"arithmetic","wall_s":0.86098,"completion_tokens":2,"model_elapsed_ms":842.291,"passed_exact_answer":true,"start_offset_s":0.30027,"finish_offset_s":1.16127},{"task_label":"format","wall_s":0.61725,"completion_tokens":1,"model_elapsed_ms":602.316,"passed_exact_answer":true,"start_offset_s":1.16127,"finish_offset_s":1.77854},{"task_label":"arithmetic","wall_s":0.79468,"completion_tokens":2,"model_elapsed_ms":767.295,"passed_exact_answer":true,"start_offset_s":1.77855,"finish_offset_s":2.57325},{"task_label":"format","wall_s":0.61774,"completion_tokens":1,"model_elapsed_ms":602.805,"passed_exact_answer":true,"start_offset_s":2.57325,"finish_offset_s":3.19101}],"stop_reason":null,"wall_s":5.6822,"placement_before":null,"placement_after":null,"worker_intervals":[{"start_offset_s":0.0003,"end_offset_s":5.000311},{"start_offset_s":0.000301,"end_offset_s":5.000346},{"start_offset_s":0.000307,"end_offset_s":5.000349},{"start_offset_s":0.000301,"end_offset_s":5.000448}],"worker_start_spread_s":6e-06,"all_ai_within_common_worker_interval":true},
+    {"sequence":6,"target":"windows_gpu_candidate","host_hash_mib_s":5914.833,"workers":4,"seconds":5,"requested_ai_count":4,"ai_requests":[{"task_label":"arithmetic","wall_s":0.43558,"completion_tokens":3,"model_elapsed_ms":370.376,"passed_exact_answer":true,"start_offset_s":0.30019,"finish_offset_s":0.73579},{"task_label":"format","wall_s":0.34143,"completion_tokens":2,"model_elapsed_ms":263.519,"passed_exact_answer":true,"start_offset_s":0.7358,"finish_offset_s":1.07725},{"task_label":"arithmetic","wall_s":0.39043,"completion_tokens":3,"model_elapsed_ms":327.767,"passed_exact_answer":true,"start_offset_s":1.07726,"finish_offset_s":1.4677},{"task_label":"format","wall_s":0.30893,"completion_tokens":2,"model_elapsed_ms":246.927,"passed_exact_answer":true,"start_offset_s":1.46771,"finish_offset_s":1.77666}],"stop_reason":null,"wall_s":5.66543,"placement_before":{"expected_condition":"windows_gpu_candidate","ollama_processor":"100% GPU","size_bytes":574745474,"size_vram_bytes":574745474,"digest_matches":true,"placement_check_passed":true},"placement_after":{"expected_condition":"windows_gpu_candidate","ollama_processor":"100% GPU","size_bytes":574745474,"size_vram_bytes":574745474,"digest_matches":true,"placement_check_passed":true},"worker_intervals":[{"start_offset_s":0.000213,"end_offset_s":5.000247},{"start_offset_s":0.000225,"end_offset_s":5.000246},{"start_offset_s":0.000205,"end_offset_s":5.00029},{"start_offset_s":0.000205,"end_offset_s":5.00029}],"worker_start_spread_s":2e-05,"all_ai_within_common_worker_interval":true},
+    {"sequence":7,"target":"windows_cpu","host_hash_mib_s":5731.747,"workers":4,"seconds":5,"requested_ai_count":4,"ai_requests":[{"task_label":"arithmetic","wall_s":0.31411,"completion_tokens":3,"model_elapsed_ms":255.716,"passed_exact_answer":true,"start_offset_s":0.30017,"finish_offset_s":0.61431},{"task_label":"format","wall_s":0.29449,"completion_tokens":2,"model_elapsed_ms":186.422,"passed_exact_answer":true,"start_offset_s":0.61431,"finish_offset_s":0.90883},{"task_label":"arithmetic","wall_s":0.35522,"completion_tokens":3,"model_elapsed_ms":270.911,"passed_exact_answer":true,"start_offset_s":0.90883,"finish_offset_s":1.26408},{"task_label":"format","wall_s":0.25714,"completion_tokens":2,"model_elapsed_ms":170.199,"passed_exact_answer":true,"start_offset_s":1.26408,"finish_offset_s":1.52125}],"stop_reason":null,"wall_s":5.73613,"placement_before":{"expected_condition":"windows_cpu","ollama_processor":"100% CPU","size_bytes":575741621,"size_vram_bytes":0,"digest_matches":true,"placement_check_passed":true},"placement_after":{"expected_condition":"windows_cpu","ollama_processor":"100% CPU","size_bytes":575741621,"size_vram_bytes":0,"digest_matches":true,"placement_check_passed":true},"worker_intervals":[{"start_offset_s":0.000155,"end_offset_s":5.000184},{"start_offset_s":0.000113,"end_offset_s":5.00019},{"start_offset_s":0.000114,"end_offset_s":5.000239},{"start_offset_s":0.000112,"end_offset_s":5.000239}],"worker_start_spread_s":4.4e-05,"all_ai_within_common_worker_interval":true},
+    {"sequence":8,"target":"baseline","host_hash_mib_s":6268.01,"workers":4,"seconds":5,"requested_ai_count":0,"ai_requests":[],"stop_reason":null,"wall_s":5.70995,"placement_before":null,"placement_after":null,"worker_intervals":[{"start_offset_s":8.4e-05,"end_offset_s":5.000092},{"start_offset_s":7.8e-05,"end_offset_s":5.000138},{"start_offset_s":7.9e-05,"end_offset_s":5.000183},{"start_offset_s":8.3e-05,"end_offset_s":5.0002}],"worker_start_spread_s":5e-06,"all_ai_within_common_worker_interval":true},
+    {"sequence":9,"target":"windows_gpu_candidate","host_hash_mib_s":5921.673,"workers":4,"seconds":5,"requested_ai_count":4,"ai_requests":[{"task_label":"arithmetic","wall_s":0.42774,"completion_tokens":3,"model_elapsed_ms":367.132,"passed_exact_answer":true,"start_offset_s":0.30055,"finish_offset_s":0.72831},{"task_label":"format","wall_s":0.32424,"completion_tokens":2,"model_elapsed_ms":263.942,"passed_exact_answer":true,"start_offset_s":0.72832,"finish_offset_s":1.05259},{"task_label":"arithmetic","wall_s":0.39501,"completion_tokens":3,"model_elapsed_ms":332.421,"passed_exact_answer":true,"start_offset_s":1.05259,"finish_offset_s":1.44762},{"task_label":"format","wall_s":0.32038,"completion_tokens":2,"model_elapsed_ms":255.224,"passed_exact_answer":true,"start_offset_s":1.44762,"finish_offset_s":1.76802}],"stop_reason":null,"wall_s":5.69745,"placement_before":{"expected_condition":"windows_gpu_candidate","ollama_processor":"100% GPU","size_bytes":574745474,"size_vram_bytes":574745474,"digest_matches":true,"placement_check_passed":true},"placement_after":{"expected_condition":"windows_gpu_candidate","ollama_processor":"100% GPU","size_bytes":574745474,"size_vram_bytes":574745474,"digest_matches":true,"placement_check_passed":true},"worker_intervals":[{"start_offset_s":7.9e-05,"end_offset_s":5.000132},{"start_offset_s":7.9e-05,"end_offset_s":5.000104},{"start_offset_s":8e-05,"end_offset_s":5.000117},{"start_offset_s":7.9e-05,"end_offset_s":5.000224}],"worker_start_spread_s":2e-06,"all_ai_within_common_worker_interval":true},
+    {"sequence":10,"target":"windows_cpu","host_hash_mib_s":5505.107,"workers":4,"seconds":5,"requested_ai_count":4,"ai_requests":[{"task_label":"arithmetic","wall_s":0.33714,"completion_tokens":3,"model_elapsed_ms":279.565,"passed_exact_answer":true,"start_offset_s":0.3005,"finish_offset_s":0.63766},{"task_label":"format","wall_s":0.32297,"completion_tokens":2,"model_elapsed_ms":216.02,"passed_exact_answer":true,"start_offset_s":0.63767,"finish_offset_s":0.96067},{"task_label":"arithmetic","wall_s":0.40515,"completion_tokens":3,"model_elapsed_ms":293.812,"passed_exact_answer":true,"start_offset_s":0.96068,"finish_offset_s":1.36585},{"task_label":"format","wall_s":0.24906,"completion_tokens":2,"model_elapsed_ms":175.286,"passed_exact_answer":true,"start_offset_s":1.36586,"finish_offset_s":1.61494}],"stop_reason":null,"wall_s":5.72871,"placement_before":{"expected_condition":"windows_cpu","ollama_processor":"100% CPU","size_bytes":575741621,"size_vram_bytes":0,"digest_matches":true,"placement_check_passed":true},"placement_after":{"expected_condition":"windows_cpu","ollama_processor":"100% CPU","size_bytes":575741621,"size_vram_bytes":0,"digest_matches":true,"placement_check_passed":true},"worker_intervals":[{"start_offset_s":0.000413,"end_offset_s":5.000417},{"start_offset_s":0.000402,"end_offset_s":5.000408},{"start_offset_s":0.000406,"end_offset_s":5.000469},{"start_offset_s":0.000409,"end_offset_s":5.000491}],"worker_start_spread_s":1.1e-05,"all_ai_within_common_worker_interval":true},
+    {"sequence":11,"target":"iphone_usb_coreml","host_hash_mib_s":6251.741,"workers":4,"seconds":5,"requested_ai_count":4,"ai_requests":[{"task_label":"arithmetic","wall_s":0.86463,"completion_tokens":2,"model_elapsed_ms":843.302,"passed_exact_answer":true,"start_offset_s":0.30036,"finish_offset_s":1.165},{"task_label":"format","wall_s":0.62168,"completion_tokens":1,"model_elapsed_ms":604.639,"passed_exact_answer":true,"start_offset_s":1.16501,"finish_offset_s":1.78671},{"task_label":"arithmetic","wall_s":0.78066,"completion_tokens":2,"model_elapsed_ms":766.043,"passed_exact_answer":true,"start_offset_s":1.78672,"finish_offset_s":2.56739},{"task_label":"format","wall_s":0.62179,"completion_tokens":1,"model_elapsed_ms":606.102,"passed_exact_answer":true,"start_offset_s":2.5674,"finish_offset_s":3.1892}],"stop_reason":null,"wall_s":5.66895,"placement_before":null,"placement_after":null,"worker_intervals":[{"start_offset_s":9.4e-05,"end_offset_s":5.000112},{"start_offset_s":9.5e-05,"end_offset_s":5.000175},{"start_offset_s":0.000142,"end_offset_s":5.000264},{"start_offset_s":0.000115,"end_offset_s":5.000242}],"worker_start_spread_s":4.8e-05,"all_ai_within_common_worker_interval":true},
+    {"sequence":12,"target":"baseline","host_hash_mib_s":6262.467,"workers":4,"seconds":5,"requested_ai_count":0,"ai_requests":[],"stop_reason":null,"wall_s":5.66338,"placement_before":null,"placement_after":null,"worker_intervals":[{"start_offset_s":9.7e-05,"end_offset_s":5.000123},{"start_offset_s":0.000109,"end_offset_s":5.000238},{"start_offset_s":0.000129,"end_offset_s":5.000239},{"start_offset_s":0.000607,"end_offset_s":5.000765}],"worker_start_spread_s":0.00051,"all_ai_within_common_worker_interval":true},
+    {"sequence":13,"target":"windows_cpu","host_hash_mib_s":5672.775,"workers":4,"seconds":5,"requested_ai_count":4,"ai_requests":[{"task_label":"arithmetic","wall_s":0.314,"completion_tokens":3,"model_elapsed_ms":258.722,"passed_exact_answer":true,"start_offset_s":0.30032,"finish_offset_s":0.61435},{"task_label":"format","wall_s":0.24197,"completion_tokens":2,"model_elapsed_ms":173.256,"passed_exact_answer":true,"start_offset_s":0.61436,"finish_offset_s":0.85635},{"task_label":"arithmetic","wall_s":0.32526,"completion_tokens":3,"model_elapsed_ms":258.397,"passed_exact_answer":true,"start_offset_s":0.85636,"finish_offset_s":1.18165},{"task_label":"format","wall_s":0.2433,"completion_tokens":2,"model_elapsed_ms":173.612,"passed_exact_answer":true,"start_offset_s":1.18165,"finish_offset_s":1.42498}],"stop_reason":null,"wall_s":5.70818,"placement_before":{"expected_condition":"windows_cpu","ollama_processor":"100% CPU","size_bytes":575741621,"size_vram_bytes":0,"digest_matches":true,"placement_check_passed":true},"placement_after":{"expected_condition":"windows_cpu","ollama_processor":"100% CPU","size_bytes":575741621,"size_vram_bytes":0,"digest_matches":true,"placement_check_passed":true},"worker_intervals":[{"start_offset_s":8e-05,"end_offset_s":5.000117},{"start_offset_s":8.5e-05,"end_offset_s":5.000128},{"start_offset_s":8.2e-05,"end_offset_s":5.000162},{"start_offset_s":8e-05,"end_offset_s":5.000183}],"worker_start_spread_s":5e-06,"all_ai_within_common_worker_interval":true},
+    {"sequence":14,"target":"windows_gpu_candidate","host_hash_mib_s":5932.911,"workers":4,"seconds":5,"requested_ai_count":4,"ai_requests":[{"task_label":"arithmetic","wall_s":0.43871,"completion_tokens":3,"model_elapsed_ms":377.458,"passed_exact_answer":true,"start_offset_s":0.30017,"finish_offset_s":0.7389},{"task_label":"format","wall_s":0.31538,"completion_tokens":2,"model_elapsed_ms":252.239,"passed_exact_answer":true,"start_offset_s":0.7389,"finish_offset_s":1.05431},{"task_label":"arithmetic","wall_s":0.38901,"completion_tokens":3,"model_elapsed_ms":323.725,"passed_exact_answer":true,"start_offset_s":1.05432,"finish_offset_s":1.44334},{"task_label":"format","wall_s":0.30717,"completion_tokens":2,"model_elapsed_ms":248.94,"passed_exact_answer":true,"start_offset_s":1.44335,"finish_offset_s":1.75054}],"stop_reason":null,"wall_s":5.67878,"placement_before":{"expected_condition":"windows_gpu_candidate","ollama_processor":"100% GPU","size_bytes":574745474,"size_vram_bytes":574745474,"digest_matches":true,"placement_check_passed":true},"placement_after":{"expected_condition":"windows_gpu_candidate","ollama_processor":"100% GPU","size_bytes":574745474,"size_vram_bytes":574745474,"digest_matches":true,"placement_check_passed":true},"worker_intervals":[{"start_offset_s":8.6e-05,"end_offset_s":5.000135},{"start_offset_s":8.6e-05,"end_offset_s":5.000228},{"start_offset_s":9e-05,"end_offset_s":5.000231},{"start_offset_s":8.7e-05,"end_offset_s":5.000222}],"worker_start_spread_s":4e-06,"all_ai_within_common_worker_interval":true},
+    {"sequence":15,"target":"iphone_usb_coreml","host_hash_mib_s":6276.334,"workers":4,"seconds":5,"requested_ai_count":4,"ai_requests":[{"task_label":"arithmetic","wall_s":0.85982,"completion_tokens":2,"model_elapsed_ms":841.245,"passed_exact_answer":true,"start_offset_s":0.30051,"finish_offset_s":1.16034},{"task_label":"format","wall_s":0.61611,"completion_tokens":1,"model_elapsed_ms":601.509,"passed_exact_answer":true,"start_offset_s":1.16035,"finish_offset_s":1.77648},{"task_label":"arithmetic","wall_s":0.79213,"completion_tokens":2,"model_elapsed_ms":766.083,"passed_exact_answer":true,"start_offset_s":1.77648,"finish_offset_s":2.56863},{"task_label":"format","wall_s":0.6172,"completion_tokens":1,"model_elapsed_ms":602.547,"passed_exact_answer":true,"start_offset_s":2.56864,"finish_offset_s":3.18585}],"stop_reason":null,"wall_s":5.6596,"placement_before":null,"placement_after":null,"worker_intervals":[{"start_offset_s":5.7e-05,"end_offset_s":5.000102},{"start_offset_s":5.9e-05,"end_offset_s":5.000108},{"start_offset_s":5.7e-05,"end_offset_s":5.000201},{"start_offset_s":0.000574,"end_offset_s":5.000706}],"worker_start_spread_s":0.000518,"all_ai_within_common_worker_interval":true},
+    {"sequence":16,"target":"baseline","host_hash_mib_s":6080.738,"workers":4,"seconds":5,"requested_ai_count":0,"ai_requests":[],"stop_reason":null,"wall_s":5.65983,"placement_before":null,"placement_after":null,"worker_intervals":[{"start_offset_s":0.000109,"end_offset_s":5.000174},{"start_offset_s":9.4e-05,"end_offset_s":5.0002},{"start_offset_s":9.6e-05,"end_offset_s":5.00019},{"start_offset_s":0.000129,"end_offset_s":5.000233}],"worker_start_spread_s":3.6e-05,"all_ai_within_common_worker_interval":true},
+    {"sequence":17,"target":"windows_gpu_candidate","host_hash_mib_s":5896.846,"workers":4,"seconds":5,"requested_ai_count":4,"ai_requests":[{"task_label":"arithmetic","wall_s":0.43696,"completion_tokens":3,"model_elapsed_ms":367.796,"passed_exact_answer":true,"start_offset_s":0.30054,"finish_offset_s":0.73752},{"task_label":"format","wall_s":0.31358,"completion_tokens":2,"model_elapsed_ms":250.995,"passed_exact_answer":true,"start_offset_s":0.73753,"finish_offset_s":1.05113},{"task_label":"arithmetic","wall_s":0.38946,"completion_tokens":3,"model_elapsed_ms":327.134,"passed_exact_answer":true,"start_offset_s":1.05113,"finish_offset_s":1.44061},{"task_label":"format","wall_s":0.31553,"completion_tokens":2,"model_elapsed_ms":254.212,"passed_exact_answer":true,"start_offset_s":1.44061,"finish_offset_s":1.75616}],"stop_reason":null,"wall_s":5.68245,"placement_before":{"expected_condition":"windows_gpu_candidate","ollama_processor":"100% GPU","size_bytes":574745474,"size_vram_bytes":574745474,"digest_matches":true,"placement_check_passed":true},"placement_after":{"expected_condition":"windows_gpu_candidate","ollama_processor":"100% GPU","size_bytes":574745474,"size_vram_bytes":574745474,"digest_matches":true,"placement_check_passed":true},"worker_intervals":[{"start_offset_s":7.7e-05,"end_offset_s":5.000128},{"start_offset_s":8e-05,"end_offset_s":5.000155},{"start_offset_s":7.3e-05,"end_offset_s":5.000155},{"start_offset_s":7.4e-05,"end_offset_s":5.000221}],"worker_start_spread_s":7e-06,"all_ai_within_common_worker_interval":true},
+    {"sequence":18,"target":"iphone_usb_coreml","host_hash_mib_s":6248.73,"workers":4,"seconds":5,"requested_ai_count":4,"ai_requests":[{"task_label":"arithmetic","wall_s":0.86417,"completion_tokens":2,"model_elapsed_ms":843.473,"passed_exact_answer":true,"start_offset_s":0.30045,"finish_offset_s":1.16464},{"task_label":"format","wall_s":0.61932,"completion_tokens":1,"model_elapsed_ms":603.456,"passed_exact_answer":true,"start_offset_s":1.16464,"finish_offset_s":1.78398},{"task_label":"arithmetic","wall_s":0.79481,"completion_tokens":2,"model_elapsed_ms":766.366,"passed_exact_answer":true,"start_offset_s":1.78399,"finish_offset_s":2.57881},{"task_label":"format","wall_s":0.61844,"completion_tokens":1,"model_elapsed_ms":602.492,"passed_exact_answer":true,"start_offset_s":2.57882,"finish_offset_s":3.19728}],"stop_reason":null,"wall_s":5.65924,"placement_before":null,"placement_after":null,"worker_intervals":[{"start_offset_s":7.8e-05,"end_offset_s":5.000119},{"start_offset_s":8e-05,"end_offset_s":5.000177},{"start_offset_s":7.9e-05,"end_offset_s":5.000152},{"start_offset_s":0.000628,"end_offset_s":5.000802}],"worker_start_spread_s":0.000549,"all_ai_within_common_worker_interval":true},
+    {"sequence":19,"target":"windows_cpu","host_hash_mib_s":5692.556,"workers":4,"seconds":5,"requested_ai_count":4,"ai_requests":[{"task_label":"arithmetic","wall_s":0.30731,"completion_tokens":3,"model_elapsed_ms":251.196,"passed_exact_answer":true,"start_offset_s":0.3005,"finish_offset_s":0.60783},{"task_label":"format","wall_s":0.2342,"completion_tokens":2,"model_elapsed_ms":163.596,"passed_exact_answer":true,"start_offset_s":0.60784,"finish_offset_s":0.84206},{"task_label":"arithmetic","wall_s":0.33195,"completion_tokens":3,"model_elapsed_ms":264.066,"passed_exact_answer":true,"start_offset_s":0.84207,"finish_offset_s":1.17405},{"task_label":"format","wall_s":0.24508,"completion_tokens":2,"model_elapsed_ms":163.867,"passed_exact_answer":true,"start_offset_s":1.17405,"finish_offset_s":1.41919}],"stop_reason":null,"wall_s":5.7951,"placement_before":{"expected_condition":"windows_cpu","ollama_processor":"100% CPU","size_bytes":575741621,"size_vram_bytes":0,"digest_matches":true,"placement_check_passed":true},"placement_after":{"expected_condition":"windows_cpu","ollama_processor":"100% CPU","size_bytes":575741621,"size_vram_bytes":0,"digest_matches":true,"placement_check_passed":true},"worker_intervals":[{"start_offset_s":0.000169,"end_offset_s":5.000213},{"start_offset_s":0.000169,"end_offset_s":5.000193},{"start_offset_s":0.000169,"end_offset_s":5.000292},{"start_offset_s":0.000169,"end_offset_s":5.000308}],"worker_start_spread_s":0.0,"all_ai_within_common_worker_interval":true},
+    {"sequence":20,"target":"baseline","host_hash_mib_s":6322.407,"workers":4,"seconds":5,"requested_ai_count":0,"ai_requests":[],"stop_reason":null,"wall_s":5.67269,"placement_before":null,"placement_after":null,"worker_intervals":[{"start_offset_s":0.000453,"end_offset_s":5.000555},{"start_offset_s":0.000454,"end_offset_s":5.000552},{"start_offset_s":0.000452,"end_offset_s":5.000562},{"start_offset_s":0.000453,"end_offset_s":5.000594}],"worker_start_spread_s":2e-06,"all_ai_within_common_worker_interval":true},
+    {"sequence":21,"target":"iphone_usb_coreml","host_hash_mib_s":6289.681,"workers":4,"seconds":5,"requested_ai_count":4,"ai_requests":[{"task_label":"arithmetic","wall_s":0.85843,"completion_tokens":2,"model_elapsed_ms":840.426,"passed_exact_answer":true,"start_offset_s":0.30028,"finish_offset_s":1.15872},{"task_label":"format","wall_s":0.63997,"completion_tokens":1,"model_elapsed_ms":608.194,"passed_exact_answer":true,"start_offset_s":1.15872,"finish_offset_s":1.79871},{"task_label":"arithmetic","wall_s":0.7805,"completion_tokens":2,"model_elapsed_ms":764.524,"passed_exact_answer":true,"start_offset_s":1.79872,"finish_offset_s":2.57923},{"task_label":"format","wall_s":0.61789,"completion_tokens":1,"model_elapsed_ms":602.369,"passed_exact_answer":true,"start_offset_s":2.57924,"finish_offset_s":3.19715}],"stop_reason":null,"wall_s":5.68211,"placement_before":null,"placement_after":null,"worker_intervals":[{"start_offset_s":0.000646,"end_offset_s":5.000662},{"start_offset_s":0.000643,"end_offset_s":5.000663},{"start_offset_s":0.000641,"end_offset_s":5.00074},{"start_offset_s":0.000641,"end_offset_s":5.000727}],"worker_start_spread_s":5e-06,"all_ai_within_common_worker_interval":true},
+    {"sequence":22,"target":"windows_cpu","host_hash_mib_s":5729.627,"workers":4,"seconds":5,"requested_ai_count":4,"ai_requests":[{"task_label":"arithmetic","wall_s":0.30272,"completion_tokens":3,"model_elapsed_ms":250.102,"passed_exact_answer":true,"start_offset_s":0.30054,"finish_offset_s":0.60328},{"task_label":"format","wall_s":0.2357,"completion_tokens":2,"model_elapsed_ms":167.668,"passed_exact_answer":true,"start_offset_s":0.60329,"finish_offset_s":0.83902},{"task_label":"arithmetic","wall_s":0.32798,"completion_tokens":3,"model_elapsed_ms":254.76,"passed_exact_answer":true,"start_offset_s":0.83903,"finish_offset_s":1.16703},{"task_label":"format","wall_s":0.25407,"completion_tokens":2,"model_elapsed_ms":184.1,"passed_exact_answer":true,"start_offset_s":1.16703,"finish_offset_s":1.42113}],"stop_reason":null,"wall_s":5.68992,"placement_before":{"expected_condition":"windows_cpu","ollama_processor":"100% CPU","size_bytes":575741621,"size_vram_bytes":0,"digest_matches":true,"placement_check_passed":true},"placement_after":{"expected_condition":"windows_cpu","ollama_processor":"100% CPU","size_bytes":575741621,"size_vram_bytes":0,"digest_matches":true,"placement_check_passed":true},"worker_intervals":[{"start_offset_s":7.8e-05,"end_offset_s":5.000185},{"start_offset_s":7.8e-05,"end_offset_s":5.000151},{"start_offset_s":7.8e-05,"end_offset_s":5.000186},{"start_offset_s":8.2e-05,"end_offset_s":5.000222}],"worker_start_spread_s":4e-06,"all_ai_within_common_worker_interval":true},
+    {"sequence":23,"target":"windows_gpu_candidate","host_hash_mib_s":5867.84,"workers":4,"seconds":5,"requested_ai_count":4,"ai_requests":[{"task_label":"arithmetic","wall_s":0.42336,"completion_tokens":3,"model_elapsed_ms":363.499,"passed_exact_answer":true,"start_offset_s":0.30021,"finish_offset_s":0.72359},{"task_label":"format","wall_s":0.31287,"completion_tokens":2,"model_elapsed_ms":252.338,"passed_exact_answer":true,"start_offset_s":0.7236,"finish_offset_s":1.03649},{"task_label":"arithmetic","wall_s":0.39921,"completion_tokens":3,"model_elapsed_ms":336.526,"passed_exact_answer":true,"start_offset_s":1.03649,"finish_offset_s":1.43573},{"task_label":"format","wall_s":0.31932,"completion_tokens":2,"model_elapsed_ms":256.48,"passed_exact_answer":true,"start_offset_s":1.43574,"finish_offset_s":1.75508}],"stop_reason":null,"wall_s":5.68132,"placement_before":{"expected_condition":"windows_gpu_candidate","ollama_processor":"100% GPU","size_bytes":574745474,"size_vram_bytes":574745474,"digest_matches":true,"placement_check_passed":true},"placement_after":{"expected_condition":"windows_gpu_candidate","ollama_processor":"100% GPU","size_bytes":574745474,"size_vram_bytes":574745474,"digest_matches":true,"placement_check_passed":true},"worker_intervals":[{"start_offset_s":8.3e-05,"end_offset_s":5.000107},{"start_offset_s":8.2e-05,"end_offset_s":5.000122},{"start_offset_s":8.5e-05,"end_offset_s":5.000239},{"start_offset_s":8.2e-05,"end_offset_s":5.000238}],"worker_start_spread_s":3e-06,"all_ai_within_common_worker_interval":true},
+    {"sequence":24,"target":"baseline","host_hash_mib_s":6178.101,"workers":4,"seconds":5,"requested_ai_count":0,"ai_requests":[],"stop_reason":null,"wall_s":5.6792,"placement_before":null,"placement_after":null,"worker_intervals":[{"start_offset_s":0.000309,"end_offset_s":5.000328},{"start_offset_s":0.000299,"end_offset_s":5.000342},{"start_offset_s":0.000302,"end_offset_s":5.000442},{"start_offset_s":0.000308,"end_offset_s":5.000426}],"worker_start_spread_s":1.1e-05,"all_ai_within_common_worker_interval":true}
+  ]
+}

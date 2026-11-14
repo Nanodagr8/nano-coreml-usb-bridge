@@ -1,0 +1,176 @@
+{
+  "schema": "nano-r3-windows-concurrency-exploratory-v1",
+  "date_local": "2026-11-13",
+  "model": "qwen3.5:0.8b",
+  "windows_ollama_model_digest": "de63045f29755d4721c09d54c9b45c2dadb644f4fd7d604d4cac90d96049971c",
+  "task_label": "arithmetic_exact_42",
+  "task_quality": "exact_response_checked_in_memory_not_text_logged",
+  "host_work_unit": "sha256_of_fixed_256KiB_buffer",
+  "host_worker_window_seconds": 5,
+  "iphone_measurements": 0,
+  "energy_measured": false,
+  "cross_device_offloading_advantage_proved": false,
+  "runs": [
+    {
+      "label": "two_workers",
+      "background_workers": 2,
+      "private_metadata_source_sha256": "f4f2d895bb8d80e3b0661ad2ae46f399cab0bbf372f54a06ec141ad321e572b5",
+      "observations": [
+        {
+          "condition": "baseline",
+          "sequence": 0,
+          "host_hash_mib_s": 3467.199,
+          "ai_completed_during_host_work": true,
+          "ai_wall_s": null,
+          "ai_completion_tokens": null,
+          "exact_answer_correct": null
+        },
+        {
+          "condition": "windows_cpu",
+          "sequence": 1,
+          "host_hash_mib_s": 3447.194,
+          "ai_completed_during_host_work": true,
+          "ai_wall_s": 0.28989,
+          "ai_completion_tokens": 3,
+          "exact_answer_correct": true
+        },
+        {
+          "condition": "windows_gpu_candidate",
+          "sequence": 2,
+          "host_hash_mib_s": 3524.519,
+          "ai_completed_during_host_work": true,
+          "ai_wall_s": 0.39592,
+          "ai_completion_tokens": 3,
+          "exact_answer_correct": true
+        },
+        {
+          "condition": "baseline",
+          "sequence": 3,
+          "host_hash_mib_s": 3507.132,
+          "ai_completed_during_host_work": true,
+          "ai_wall_s": null,
+          "ai_completion_tokens": null,
+          "exact_answer_correct": null
+        }
+      ],
+      "summary": [
+        {
+          "condition": "baseline",
+          "trials": 2,
+          "median_host_hash_mib_s": 3487.166,
+          "median_ai_wall_s": null,
+          "correct_answers": 0
+        },
+        {
+          "condition": "windows_cpu",
+          "trials": 1,
+          "median_host_hash_mib_s": 3447.194,
+          "median_ai_wall_s": 0.28989,
+          "correct_answers": 1
+        },
+        {
+          "condition": "windows_gpu_candidate",
+          "trials": 1,
+          "median_host_hash_mib_s": 3524.519,
+          "median_ai_wall_s": 0.39592,
+          "correct_answers": 1
+        }
+      ],
+      "all_conditions_completed": true
+    },
+    {
+      "label": "four_workers",
+      "background_workers": 4,
+      "private_metadata_source_sha256": "c2757487fc79daf1c5cbb956ce4a1daefb9b1a64798cbd37f629963291a88999",
+      "observations": [
+        {
+          "condition": "baseline",
+          "sequence": 0,
+          "host_hash_mib_s": 6339.326,
+          "ai_completed_during_host_work": true,
+          "ai_wall_s": null,
+          "ai_completion_tokens": null,
+          "exact_answer_correct": null
+        },
+        {
+          "condition": "windows_cpu",
+          "sequence": 1,
+          "host_hash_mib_s": 6159.811,
+          "ai_completed_during_host_work": true,
+          "ai_wall_s": 0.31036,
+          "ai_completion_tokens": 3,
+          "exact_answer_correct": true
+        },
+        {
+          "condition": "windows_gpu_candidate",
+          "sequence": 2,
+          "host_hash_mib_s": 6167.606,
+          "ai_completed_during_host_work": true,
+          "ai_wall_s": 0.41829,
+          "ai_completion_tokens": 3,
+          "exact_answer_correct": true
+        },
+        {
+          "condition": "baseline",
+          "sequence": 3,
+          "host_hash_mib_s": 6448.927,
+          "ai_completed_during_host_work": true,
+          "ai_wall_s": null,
+          "ai_completion_tokens": null,
+          "exact_answer_correct": null
+        },
+        {
+          "condition": "windows_gpu_candidate",
+          "sequence": 4,
+          "host_hash_mib_s": 5968.964,
+          "ai_completed_during_host_work": true,
+          "ai_wall_s": 0.42323,
+          "ai_completion_tokens": 3,
+          "exact_answer_correct": true
+        },
+        {
+          "condition": "windows_cpu",
+          "sequence": 5,
+          "host_hash_mib_s": 6073.404,
+          "ai_completed_during_host_work": true,
+          "ai_wall_s": 0.31052,
+          "ai_completion_tokens": 3,
+          "exact_answer_correct": true
+        },
+        {
+          "condition": "baseline",
+          "sequence": 6,
+          "host_hash_mib_s": 6326.737,
+          "ai_completed_during_host_work": true,
+          "ai_wall_s": null,
+          "ai_completion_tokens": null,
+          "exact_answer_correct": null
+        }
+      ],
+      "summary": [
+        {
+          "condition": "baseline",
+          "trials": 3,
+          "median_host_hash_mib_s": 6339.326,
+          "median_ai_wall_s": null,
+          "correct_answers": 0
+        },
+        {
+          "condition": "windows_cpu",
+          "trials": 2,
+          "median_host_hash_mib_s": 6116.608,
+          "median_ai_wall_s": 0.31044,
+          "correct_answers": 2
+        },
+        {
+          "condition": "windows_gpu_candidate",
+          "trials": 2,
+          "median_host_hash_mib_s": 6068.285,
+          "median_ai_wall_s": 0.42076,
+          "correct_answers": 2
+        }
+      ],
+      "all_conditions_completed": true
+    }
+  ]
+}
