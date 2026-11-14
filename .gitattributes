@@ -33,3 +33,7 @@ results/r5_coding_study_protocol_20261114.json -text whitespace=cr-at-eol
 
 # Preserve the R6 qualified diagnostic source bytes.
 client/r6_diagnostic_grading.py -text whitespace=cr-at-eol
+
+# Preserve the source and protocol bytes checked by the live diagnostic runner.
+client/r7_live_diagnostics.py -text whitespace=cr-at-eol
+results/r7_live_protocol_20261114.json -text whitespace=cr-at-eol
