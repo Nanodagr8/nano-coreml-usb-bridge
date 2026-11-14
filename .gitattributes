@@ -1,1 +1,8 @@
 results/r3_randomized_protocol_20261113.json -text whitespace=cr-at-eol
+results/r3_application_protocol_session1_20261113.json -text whitespace=cr-at-eol
+results/r3_application_protocol_session2_20261113.json -text whitespace=cr-at-eol
+
+# Preserve the exact bytes used by the registered application session.
+client/r3_application_study.py -text whitespace=cr-at-eol
+client/r3_swift_job.py -text whitespace=cr-at-eol
+client/r3_swift_prepare.py -text whitespace=cr-at-eol
