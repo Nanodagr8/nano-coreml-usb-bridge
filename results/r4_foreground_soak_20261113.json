@@ -1,0 +1,298 @@
+{
+  "stage": "soak",
+  "runner_sha256": "a452f56b5e7ba3f3b6a307656d10067e4289eb997ebeb0881b92b8ab54469f2b",
+  "supporting_client_sha256": "f50f30a645f3dcf842422b03de49725a9fedf45deb1ea9846820b68a169b92a1",
+  "started_utc": "2026-11-14T05:43:25.581453+00:00",
+  "finished_utc": "2026-11-14T05:55:35.484855+00:00",
+  "complete": true,
+  "stop": null,
+  "model_id": "qwen3.5-0.8b",
+  "target": "iphone_usb_coreml",
+  "statuses": [
+    {
+      "round": 1,
+      "phase": "before_round",
+      "wall_s": 0.026518,
+      "elapsed_s": 0.027762,
+      "pinned_authenticated_ready": true
+    },
+    {
+      "round": 1,
+      "phase": "after_round",
+      "wall_s": 0.012664,
+      "elapsed_s": 1.617038,
+      "pinned_authenticated_ready": true
+    },
+    {
+      "round": 2,
+      "phase": "before_round",
+      "wall_s": 0.023831,
+      "elapsed_s": 121.645626,
+      "pinned_authenticated_ready": true
+    },
+    {
+      "round": 2,
+      "phase": "after_round",
+      "wall_s": 0.026931,
+      "elapsed_s": 123.268933,
+      "pinned_authenticated_ready": true
+    },
+    {
+      "round": 3,
+      "phase": "before_round",
+      "wall_s": 0.032259,
+      "elapsed_s": 243.306611,
+      "pinned_authenticated_ready": true
+    },
+    {
+      "round": 3,
+      "phase": "after_round",
+      "wall_s": 0.025129,
+      "elapsed_s": 244.929723,
+      "pinned_authenticated_ready": true
+    },
+    {
+      "round": 4,
+      "phase": "before_round",
+      "wall_s": 0.022933,
+      "elapsed_s": 364.959034,
+      "pinned_authenticated_ready": true
+    },
+    {
+      "round": 4,
+      "phase": "after_round",
+      "wall_s": 0.019249,
+      "elapsed_s": 366.564045,
+      "pinned_authenticated_ready": true
+    },
+    {
+      "round": 5,
+      "phase": "before_round",
+      "wall_s": 0.019678,
+      "elapsed_s": 486.590248,
+      "pinned_authenticated_ready": true
+    },
+    {
+      "round": 5,
+      "phase": "after_round",
+      "wall_s": 0.025293,
+      "elapsed_s": 488.21425,
+      "pinned_authenticated_ready": true
+    },
+    {
+      "round": 6,
+      "phase": "before_round",
+      "wall_s": 0.019154,
+      "elapsed_s": 608.240637,
+      "pinned_authenticated_ready": true
+    },
+    {
+      "round": 6,
+      "phase": "after_round",
+      "wall_s": 0.026702,
+      "elapsed_s": 609.876041,
+      "pinned_authenticated_ready": true
+    },
+    {
+      "round": 6,
+      "phase": "final_status",
+      "wall_s": 0.019472,
+      "elapsed_s": 729.90205,
+      "pinned_authenticated_ready": true
+    }
+  ],
+  "samples": [
+    {
+      "passed_exact_answer": true,
+      "completion_tokens": 2,
+      "wall_s": 0.94752,
+      "model_elapsed_ms": 930.215,
+      "generator_tokens_per_second": 64.851,
+      "on_device_metrics_verified": true,
+      "round": 1,
+      "task": "arithmetic",
+      "elapsed_s": 0.978458
+    },
+    {
+      "passed_exact_answer": true,
+      "completion_tokens": 1,
+      "wall_s": 0.620616,
+      "model_elapsed_ms": 607.17,
+      "generator_tokens_per_second": 86.147,
+      "on_device_metrics_verified": true,
+      "round": 1,
+      "task": "format",
+      "elapsed_s": 1.601651
+    },
+    {
+      "passed_exact_answer": true,
+      "completion_tokens": 2,
+      "wall_s": 0.965047,
+      "model_elapsed_ms": 947.186,
+      "generator_tokens_per_second": 64.382,
+      "on_device_metrics_verified": true,
+      "round": 2,
+      "task": "arithmetic",
+      "elapsed_s": 122.613388
+    },
+    {
+      "passed_exact_answer": true,
+      "completion_tokens": 1,
+      "wall_s": 0.623354,
+      "model_elapsed_ms": 608.099,
+      "generator_tokens_per_second": 87.153,
+      "on_device_metrics_verified": true,
+      "round": 2,
+      "task": "format",
+      "elapsed_s": 123.239415
+    },
+    {
+      "passed_exact_answer": true,
+      "completion_tokens": 2,
+      "wall_s": 0.959896,
+      "model_elapsed_ms": 932.631,
+      "generator_tokens_per_second": 65.251,
+      "on_device_metrics_verified": true,
+      "round": 3,
+      "task": "arithmetic",
+      "elapsed_s": 244.270732
+    },
+    {
+      "passed_exact_answer": true,
+      "completion_tokens": 1,
+      "wall_s": 0.626182,
+      "model_elapsed_ms": 608.888,
+      "generator_tokens_per_second": 86.791,
+      "on_device_metrics_verified": true,
+      "round": 3,
+      "task": "format",
+      "elapsed_s": 244.901053
+    },
+    {
+      "passed_exact_answer": true,
+      "completion_tokens": 2,
+      "wall_s": 0.949312,
+      "model_elapsed_ms": 922.602,
+      "generator_tokens_per_second": 64.913,
+      "on_device_metrics_verified": true,
+      "round": 4,
+      "task": "arithmetic",
+      "elapsed_s": 365.911873
+    },
+    {
+      "passed_exact_answer": true,
+      "completion_tokens": 1,
+      "wall_s": 0.623616,
+      "model_elapsed_ms": 608.131,
+      "generator_tokens_per_second": 86.303,
+      "on_device_metrics_verified": true,
+      "round": 4,
+      "task": "format",
+      "elapsed_s": 366.540087
+    },
+    {
+      "passed_exact_answer": true,
+      "completion_tokens": 2,
+      "wall_s": 0.960645,
+      "model_elapsed_ms": 935.137,
+      "generator_tokens_per_second": 65.058,
+      "on_device_metrics_verified": true,
+      "round": 5,
+      "task": "arithmetic",
+      "elapsed_s": 487.556033
+    },
+    {
+      "passed_exact_answer": true,
+      "completion_tokens": 1,
+      "wall_s": 0.624236,
+      "model_elapsed_ms": 608.759,
+      "generator_tokens_per_second": 86.411,
+      "on_device_metrics_verified": true,
+      "round": 5,
+      "task": "format",
+      "elapsed_s": 488.184708
+    },
+    {
+      "passed_exact_answer": true,
+      "completion_tokens": 2,
+      "wall_s": 0.952186,
+      "model_elapsed_ms": 925.666,
+      "generator_tokens_per_second": 64.876,
+      "on_device_metrics_verified": true,
+      "round": 6,
+      "task": "arithmetic",
+      "elapsed_s": 609.197355
+    },
+    {
+      "passed_exact_answer": true,
+      "completion_tokens": 1,
+      "wall_s": 0.644544,
+      "model_elapsed_ms": 612.519,
+      "generator_tokens_per_second": 86.531,
+      "on_device_metrics_verified": true,
+      "round": 6,
+      "task": "format",
+      "elapsed_s": 609.846104
+    }
+  ],
+  "idle_intervals": [
+    {
+      "round": 1,
+      "requested_s": 120,
+      "observed_s": 120.000149
+    },
+    {
+      "round": 2,
+      "requested_s": 120,
+      "observed_s": 120.000582
+    },
+    {
+      "round": 3,
+      "requested_s": 120,
+      "observed_s": 120.000431
+    },
+    {
+      "round": 4,
+      "requested_s": 120,
+      "observed_s": 120.00006
+    },
+    {
+      "round": 5,
+      "requested_s": 120,
+      "observed_s": 120.000365
+    },
+    {
+      "round": 6,
+      "requested_s": 120,
+      "observed_s": 120.000462
+    }
+  ],
+  "status_attempts": 13,
+  "generation_attempts": 12,
+  "runtime_build_attested": false,
+  "wakelock_runtime_verified": false,
+  "foreground_state_instrumented": false,
+  "energy_measured": false,
+  "ane_profiled": false,
+  "automatic_retries": false,
+  "observed_elapsed_s": 729.904771,
+  "elapsed_source": "worker_monotonic",
+  "schema": "nano-r4-continuity-evidence-v1",
+  "protocol_sha256": "3d3231586bcb3740c55baf0443a1472fcce1a69f6d4350e9c7e218defd1fa2b5",
+  "source_report_sha256": "4a66f92a06bbbaf867d2c83ad3eed91c7956f00c45580330fe422188937e3b87",
+  "protected_configuration_unchanged": true,
+  "externally_registered": true,
+  "registration_url": "https://github.com/Nanodagr8/nano-coreml-usb-bridge/issues/4#issuecomment-6872570454",
+  "registration_created_utc": "2026-11-14T05:43:23Z",
+  "analysis": {
+    "observation_complete": true,
+    "ready_checks_passed": 13,
+    "correct_answers": 12,
+    "idle_intervals_completed": 6,
+    "observed_elapsed_s": 729.904771,
+    "idle_seconds_observed": 720.002049,
+    "median_generation_wall_s": 0.796032,
+    "stop": null,
+    "notice": "Sampled continuity only; not continuous uptime, an availability probability, build attribution or wake-lock certification."
+  }
+}

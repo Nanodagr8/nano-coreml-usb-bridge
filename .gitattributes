@@ -20,3 +20,8 @@ results/r3_native_concurrent_registered_protocol_20261113.json -text whitespace=
 results/r3_native_concurrent_followup_protocol_20261113.json -text whitespace=cr-at-eol
 client/r3_native_concurrent_v2.py -text whitespace=cr-at-eol
 results/r3_native_concurrent_corrected_protocol_20261113.json -text whitespace=cr-at-eol
+
+# Preserve R4 observation protocol and as-run host supervisor bytes.
+client/r4_foreground_reliability.py -text whitespace=cr-at-eol
+results/r4_foreground_pilot_protocol_20261113.json -text whitespace=cr-at-eol
+results/r4_foreground_soak_protocol_20261113.json -text whitespace=cr-at-eol

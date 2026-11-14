@@ -74,6 +74,10 @@ Two isolated offline workspaces compiled all ten frozen NANO v11 sources and lin
 
 The observer-corrected, publicly preregistered randomized study completed native recompilation/linking alongside explicit Windows CPU, GPU and iPhone inference. Two earlier stopped attempts remain separate. See the [native workload results, uncertainty and limitations](docs/R3_NATIVE_CONCURRENT_20261113.md) and [numeric evidence](results/r3_native_concurrent_corrected_20261113.json). This is separate from the earlier typecheck study and standalone native qualification.
 
+## R4 sampled foreground continuity
+
+The existing pinned service passed a bounded sampled-continuity session across six two-minute idle intervals. The [operational report and remaining gates](docs/R4_FOREGROUND_CONTINUITY_20261113.md) and [numeric evidence](results/r4_foreground_soak_20261113.json) distinguish these observations from continuous uptime, unattended operation and wake-lock runtime certification. The host runner stops safely on security/transport/quality errors and preserves partial checkpoints.
+
 ## Built on existing work
 
 NANO Studios integrates [CoreML-LLM](https://github.com/john-rocky/CoreML-LLM) (MIT) and [Swift Transformers](https://github.com/huggingface/swift-transformers) (Apache-2.0). The USB interface uses concepts implemented by [pymobiledevice3](https://github.com/doronz88/pymobiledevice3); it is not included or modified here. Model weights and upstream dependencies retain their own respective licenses.

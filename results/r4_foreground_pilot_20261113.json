@@ -1,0 +1,93 @@
+{
+  "stage": "pilot",
+  "runner_sha256": "a452f56b5e7ba3f3b6a307656d10067e4289eb997ebeb0881b92b8ab54469f2b",
+  "supporting_client_sha256": "f50f30a645f3dcf842422b03de49725a9fedf45deb1ea9846820b68a169b92a1",
+  "started_utc": "2026-11-14T05:40:39.954718+00:00",
+  "finished_utc": "2026-11-14T05:40:42.242422+00:00",
+  "complete": true,
+  "stop": null,
+  "model_id": "qwen3.5-0.8b",
+  "target": "iphone_usb_coreml",
+  "statuses": [
+    {
+      "round": 1,
+      "phase": "before_round",
+      "wall_s": 0.029998,
+      "elapsed_s": 0.031394,
+      "pinned_authenticated_ready": true
+    },
+    {
+      "round": 1,
+      "phase": "after_round",
+      "wall_s": 0.026524,
+      "elapsed_s": 2.253285,
+      "pinned_authenticated_ready": true
+    },
+    {
+      "round": 1,
+      "phase": "final_status",
+      "wall_s": 0.027516,
+      "elapsed_s": 2.284897,
+      "pinned_authenticated_ready": true
+    }
+  ],
+  "samples": [
+    {
+      "passed_exact_answer": true,
+      "completion_tokens": 2,
+      "wall_s": 1.547013,
+      "model_elapsed_ms": 1509.366,
+      "generator_tokens_per_second": 62.746,
+      "on_device_metrics_verified": true,
+      "round": 1,
+      "task": "arithmetic",
+      "elapsed_s": 1.581459
+    },
+    {
+      "passed_exact_answer": true,
+      "completion_tokens": 1,
+      "wall_s": 0.640504,
+      "model_elapsed_ms": 625.447,
+      "generator_tokens_per_second": 82.257,
+      "on_device_metrics_verified": true,
+      "round": 1,
+      "task": "format",
+      "elapsed_s": 2.224054
+    }
+  ],
+  "idle_intervals": [
+    {
+      "round": 1,
+      "requested_s": 0,
+      "observed_s": 1.5e-05
+    }
+  ],
+  "status_attempts": 3,
+  "generation_attempts": 2,
+  "runtime_build_attested": false,
+  "wakelock_runtime_verified": false,
+  "foreground_state_instrumented": false,
+  "energy_measured": false,
+  "ane_profiled": false,
+  "automatic_retries": false,
+  "observed_elapsed_s": 2.286982,
+  "elapsed_source": "worker_monotonic",
+  "schema": "nano-r4-continuity-evidence-v1",
+  "protocol_sha256": "9e4ffc4884ab3d52629f2934a86c5a46467b820a6c15a400241462a7952be641",
+  "source_report_sha256": "169ad8271b951b8426233fb928baea3d99a5f567cfc4589dcc4c0a0cd352c6af",
+  "protected_configuration_unchanged": true,
+  "externally_registered": false,
+  "registration_url": null,
+  "registration_created_utc": null,
+  "analysis": {
+    "observation_complete": true,
+    "ready_checks_passed": 3,
+    "correct_answers": 2,
+    "idle_intervals_completed": 1,
+    "observed_elapsed_s": 2.286982,
+    "idle_seconds_observed": 1.5e-05,
+    "median_generation_wall_s": 1.093758,
+    "stop": null,
+    "notice": "Sampled continuity only; not continuous uptime, an availability probability, build attribution or wake-lock certification."
+  }
+}
