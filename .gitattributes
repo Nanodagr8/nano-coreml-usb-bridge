@@ -11,3 +11,12 @@ client/r3_swift_prepare.py -text whitespace=cr-at-eol
 client/r3_native_build.py -text whitespace=cr-at-eol
 results/r3_native_build_qualification_protocol_20261113.json -text whitespace=cr-at-eol
 results/r3_native_build_qualification_protocol_v2_20261113.json -text whitespace=cr-at-eol
+
+# Preserve native concurrent-study measurement and preregistration bytes.
+client/r3_native_job.py -text whitespace=cr-at-eol
+client/r3_native_concurrent_study.py -text whitespace=cr-at-eol
+results/r3_native_concurrent_pilot_protocol_20261113.json -text whitespace=cr-at-eol
+results/r3_native_concurrent_registered_protocol_20261113.json -text whitespace=cr-at-eol
+results/r3_native_concurrent_followup_protocol_20261113.json -text whitespace=cr-at-eol
+client/r3_native_concurrent_v2.py -text whitespace=cr-at-eol
+results/r3_native_concurrent_corrected_protocol_20261113.json -text whitespace=cr-at-eol

@@ -70,6 +70,10 @@ Two separately registered sessions completed the frozen ten-source NANO Swift ty
 
 Two isolated offline workspaces compiled all ten frozen NANO v11 sources and linked new unsigned ARM64 iOS executables. See the [native build qualification](docs/R3_NATIVE_BUILD_QUALIFICATION_20261113.md) and [numeric evidence](results/r3_native_build_qualification_20261113.json). This uses cached dependencies and does not package, deploy or run the app on a device.
 
+## Registered native build workload
+
+The observer-corrected, publicly preregistered randomized study completed native recompilation/linking alongside explicit Windows CPU, GPU and iPhone inference. Two earlier stopped attempts remain separate. See the [native workload results, uncertainty and limitations](docs/R3_NATIVE_CONCURRENT_20261113.md) and [numeric evidence](results/r3_native_concurrent_corrected_20261113.json). This is separate from the earlier typecheck study and standalone native qualification.
+
 ## Built on existing work
 
 NANO Studios integrates [CoreML-LLM](https://github.com/john-rocky/CoreML-LLM) (MIT) and [Swift Transformers](https://github.com/huggingface/swift-transformers) (Apache-2.0). The USB interface uses concepts implemented by [pymobiledevice3](https://github.com/doronz88/pymobiledevice3); it is not included or modified here. Model weights and upstream dependencies retain their own respective licenses.
