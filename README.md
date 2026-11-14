@@ -83,3 +83,7 @@ The existing pinned service passed a bounded sampled-continuity session across s
 NANO Studios integrates [CoreML-LLM](https://github.com/john-rocky/CoreML-LLM) (MIT) and [Swift Transformers](https://github.com/huggingface/swift-transformers) (Apache-2.0). The USB interface uses concepts implemented by [pymobiledevice3](https://github.com/doronz88/pymobiledevice3); it is not included or modified here. Model weights and upstream dependencies retain their own respective licenses.
 
 Please contribute reproducibility reports, security reviews, and measured CPU/GPU/ANE comparisons. See [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## R5 coding-task qualification
+
+The frozen [coding-task qualification package](docs/R5_CODING_QUALIFICATION_20261114.md) is prepared. Its pilot stopped at readiness before any generation because the local Windows model API was unresponsive; no comparative coding score exists. The stopped evidence is retained and a fresh registered follow-up is required.
