@@ -86,4 +86,4 @@ Please contribute reproducibility reports, security reviews, and measured CPU/GP
 
 ## R5 coding-task qualification
 
-The frozen [coding-task qualification package](docs/R5_CODING_QUALIFICATION_20261114.md) is prepared. Its pilot stopped at readiness before any generation because the local Windows model API was unresponsive; no comparative coding score exists. The stopped evidence is retained and a fresh registered follow-up is required.
+The registered [coding-task qualification](docs/R5_CODING_QUALIFICATION_20261114.md) completed all 36 fixed-suite requests after authorized recovery of the existing Windows API. Per-case scores, the separate pilot and stopped attempt are retained. These constrained tasks do not establish general coding quality, hardware speed or productivity advantage.

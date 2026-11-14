@@ -1,0 +1,16 @@
+{
+  "schema": "nano-r5-existing-service-recovery-v1",
+  "user_authorized_restart": true,
+  "restarted_utc": "2026-11-14T14:42:57.9002238Z",
+  "existing_startup_settings_reused": true,
+  "same_loopback_endpoint": true,
+  "same_model_store": true,
+  "launcher_binary_model_manifest_unchanged": true,
+  "windows_existing_model_ready_after_recovery": true,
+  "iphone_pinned_authenticated_ready_after_recovery": true,
+  "install_or_model_download": false,
+  "certificate_or_key_change": false,
+  "other_listener_changes": false,
+  "study_restart_or_retry": false,
+  "note": "Recovery preceded the fresh registration; the original stopped pilot remains separate."
+}
