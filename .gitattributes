@@ -6,3 +6,8 @@ results/r3_application_protocol_session2_20261113.json -text whitespace=cr-at-eo
 client/r3_application_study.py -text whitespace=cr-at-eol
 client/r3_swift_job.py -text whitespace=cr-at-eol
 client/r3_swift_prepare.py -text whitespace=cr-at-eol
+
+# Keep qualification runner and locked plan byte identities stable.
+client/r3_native_build.py -text whitespace=cr-at-eol
+results/r3_native_build_qualification_protocol_20261113.json -text whitespace=cr-at-eol
+results/r3_native_build_qualification_protocol_v2_20261113.json -text whitespace=cr-at-eol
